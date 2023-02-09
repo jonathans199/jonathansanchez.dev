@@ -1,4 +1,4 @@
-import WorkItem from '../../components/WorkItem'
+import { WorkItem } from '../../components/WorkItem'
 import { projects } from './../../../data/projects'
 
 const Work = () => {

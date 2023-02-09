@@ -53,11 +53,11 @@ export const Navbar = () => {
               SKILLS
             </Link>
           </li>
-          {/* <li className='py-6 text-4xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+          <li className='py-6 text-4xl hover:text-red-600 hover:ml-[-10px] duration-300'>
             <Link href='/work' onClick={() => setNav(false)}>
               WORK
             </Link>
-          </li> */}
+          </li>
           <li className='py-6 text-4xl hover:text-red-600 hover:ml-[-10px] duration-300'>
             <Link href='tutorials' onClick={() => setNav(false)}>
               TUTORIALS

@@ -1,12 +1,14 @@
 import * as React from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
+import Link from 'next/link'
 import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
-import { Navbar } from '@/layout/Navbar/Navbar'
-import { HiArrowNarrowRight } from 'react-icons/hi'
 
+import { HiArrowNarrowRight } from 'react-icons/hi'
 import { TypeAnimation } from 'react-type-animation'
+
+import { Navbar } from '@/layout/Navbar/Navbar'
+import { WorkItem } from '@/components/WorkItem'
+import { projects } from '@/../data/projects'
 
 import Icon from './../components/icons/index'
 import Javascript from './../components/icons/Javascript'
@@ -134,103 +136,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <div className='scroll' id='work' />
-        <div className='h-screen'>
+        <div className='scroll' id='work' />
+        <div className=''>
           <div className='flex flex-col justify-center'>
             <h2 className='text-4xl font-bold inline border-b-4 text-gray-300 border-red-600'>Work</h2>
             <p>checkout some of my work </p>
           </div>
-          <div className='gap-4'> */}
-        {/* <section>
-              <div className='mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8'>
-                <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16'>
-                  <div className='relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full'>
-                    <img
-                      alt='Party'
-                      src='https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
-                      className='absolute inset-0 h-full w-full object-cover'
-                    />
-                  </div>
-
-                  <div className='lg:py-24'>
-                    <h2 className='text-3xl font-bold sm:text-4xl'>Grow your audience</h2>
-
-                    <p className='mt-4 text-gray-400'>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui hic atque tenetur quis eius quos
-                      ea neque sunt, accusantium soluta minus veniam tempora deserunt? Molestiae eius quidem quam
-                      repellat.
-                    </p>
-
-                    <a
-                      href='#'
-                      className='mt-8 inline-flex items-center rounded border border-red-600 bg-red-600 px-8 py-3 text-white hover:bg-transparent hover:text-red-600 focus:outline-none focus:ring active:text-indigo-500'>
-                      <span className='text-sm font-medium'> Get Started </span>
-
-                      <svg
-                        className='ml-3 h-5 w-5'
-                        xmlns='http://www.w3.org/2000/svg'
-                        fill='none'
-                        viewBox='0 0 24 24'
-                        stroke='currentColor'>
-                        <path
-                          stroke-linecap='round'
-                          stroke-linejoin='round'
-                          stroke-width='2'
-                          d='M17 8l4 4m0 0l-4 4m4-4H3'
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <div className='mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8'>
-                <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16'>
-                  <div className='relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-first lg:h-full'>
-                    <img
-                      alt='Party'
-                      src='https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
-                      className='absolute inset-0 h-full w-full object-cover'
-                    />
-                  </div>
-
-                  <div className='lg:py-24'>
-                    <h2 className='text-3xl font-bold sm:text-4xl'>Grow your audience</h2>
-
-                    <p className='mt-4 text-gray-400'>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui hic atque tenetur quis eius quos
-                      ea neque sunt, accusantium soluta minus veniam tempora deserunt? Molestiae eius quidem quam
-                      repellat.
-                    </p>
-
-                    <a
-                      href='#'
-                      className='mt-8 inline-flex items-center rounded border border-red-600 bg-red-600 px-8 py-3 text-white hover:bg-transparent hover:text-red-600 focus:outline-none focus:ring active:text-indigo-500'>
-                      <span className='text-sm font-medium'> Get Started </span>
-
-                      <svg
-                        className='ml-3 h-5 w-5'
-                        xmlns='http://www.w3.org/2000/svg'
-                        fill='none'
-                        viewBox='0 0 24 24'
-                        stroke='currentColor'>
-                        <path
-                          stroke-linecap='round'
-                          stroke-linejoin='round'
-                          stroke-width='2'
-                          d='M17 8l4 4m0 0l-4 4m4-4H3'
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </section> */}
-
-        {/* </div>
-        </div> */}
+          <section className='max-w-[1200px] mx-auto'>
+            {projects.slice(0, 3).map(item => (
+              <WorkItem key={item.id} item={item} />
+            ))}
+          </section>
+          <Link href='/work'>
+            <button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
+              View More work
+              <span className='hover:rotate-90 duration-300'>
+                <HiArrowNarrowRight className='ml-4' />
+              </span>
+            </button>
+          </Link>
+        </div>
 
         <div id='contact' className='w-full h-screen flex justify-center items-center p-4'>
           <div className='h-screen '>

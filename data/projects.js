@@ -1,66 +1,112 @@
+import { uid } from 'uid'
+
+const id = uid(16)
+console.log(id)
+
 export const projects = [
   {
-    id: 1,
+    id: uid(16),
     img: '/img/pedals.png',
     title: 'Pedals App - IOS app',
-    description:
-      'Test testing here more and more more more ',
-    github: '',
-    live: 'link',
+    description: 'Buy and sell pre-owned and refurbished, bikes, parts and equipment locally.',
+    tech: 'React Native | Node.js (backend) | Firebase',
+    ios: 'https://apps.apple.com/us/app/pedals-app/id1604093440',
+    private: true,
   },
   {
-    id: 2,
+    id: uid(16),
+    img: '/img/dbentoby.jpeg',
+    title: 'DBenToby Sales App',
+    description:
+      'Mobile app built with React Native Expo for Sales reps to place orders while in the store, with UPC scanner and signature feature',
+    ios: 'https://apps.apple.com/ua/app/dbentoby/id1529947600',
+    github: 'https://github.com/jonathans199/dbentoby-mobile-v2',
+    live: 'https://app.dbentoby.com',
+    tech: 'React Native Expo | Node.js (backend) | React.js (backoffice) | Mongo',
+  },
+  {
+    id: uid(16),
     img: '/img/caseyresearch.png',
     title: 'Casey Research - IOS app',
     description:
-      'Test testing here more and more more more ',
-    github: '',
-    live: 'link',
+      'Subscribers can use the official mobile app for Casey Research to access all their subscriptions, view portfolio pages, and more.  Utilizing push notifications, subscribers who use the Casey Research app will be instantly notified whenever Casey publishes something new, including updates, alerts, and monthly issues.',
+    ios: 'https://apps.apple.com/us/app/casey-research-app/id1533303674',
+    tech: 'Vue (Cordova) | Node.js (backend) | Mongo',
+    private: true,
   },
   {
-    id:3,
+    id: uid(16),
+    img: '/img/marineraenelmundo.jpeg',
+    title: 'Marinera en el Mundo Florida',
+    live: 'https://www.marineraenelmundoflorida.com/',
+    github: 'https://github.com/jonathans199/marineraenelmundoflorida.com',
+    description: 'Website for events with admin sections within Next.js, using Firebase Firestore and Google Auth',
+    tech: 'Next.js | Firebase',
+  },
+  {
+    id: uid(16),
+    img: '/img/icp-mexico.jpeg',
+    title: 'ICP ERP ',
+    private: true,
+    tech: 'React.js | Node.js | Mongo',
+    description:
+      'ERP (Enterprise Resource Planning) custom software to manage order and logistics.  From Sales Orders to Purchase Orders, Inventory management to Invoicing and Backorders',
+  },
+  {
+    id: uid(16),
     img: '/img/ids.jpeg',
     title: 'Infinity Dance Studio',
-    description:
-      'Test testing here more and more more more ',
-    github: '',
-    live: 'link',
+    description: 'Local Business static website built with Vue.js',
+    github: 'https://github.com/jonathans199/infinitydancemiami.com',
+    live: 'https://www.infinitydancemiami.com/#/',
+    tech: 'Vue.js',
   },
   {
-    id: 4,
+    id: uid(16),
+    img: '/img/icpmiami.jpeg',
+    title: 'Icp Miami Website',
+    description: 'Heavy Equipment Parts distributor E-commerce platform built in Next.js',
+    github: 'https://github.com/jonathans199/icpmiami.com-nextjs',
+    tech: 'Next.js | Node.js | Mongo',
+  },
+  {
+    id: uid(16),
     img: '/img/trading-waves.jpeg',
     title: 'Trading Waves',
-    description:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam remaperiam, eaque ipsa quae explicabo.',
-    github: '',
-    live: 'link',
+    private: true,
+    description: 'Multilevel Marketing Platform for mining Crypto currency.  Built in Vue.js',
+    tech: 'Vue.js',
   },
   {
-    id: 5,
+    id: uid(16),
     img: '/img/ways.jpeg',
     title: 'Ways IOS / ANDROID app',
     description:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam remaperiam, eaque ipsa quae explicabo.',
-    github: '',
-    live: 'link',
+      'Mobile application for hotel guest to schedule transportation services to and from airport and sea ports',
+    github: 'https://github.com/jonathans199/Ways-Vue-Frontend',
+    tech: 'Vue.js',
   },
   {
-    id: 6,
-    img: '/img/icpmiami.jpeg',
-    title: 'Icp Miami Website',
+    id: uid(16),
+    img: '/img/allinclusive.jpeg',
+    title: 'All Inclusive Party Rental',
     description:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam remaperiam, eaque ipsa quae explicabo.',
-    github: '',
-    live: 'link',
+      'Mobile application for hotel guest to schedule transportation services to and from airport and sea ports',
+    private: true,
+    tech: 'Wordpress | PHP',
   },
   {
-    id: 7,
-    img: '/img/icp-mexico.jpeg',
-    title: 'ICP ERP ',
-    description:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam remaperiam, eaque ipsa quae explicabo.',
-    github: '',
-    live: 'link',
+    id: uid(16),
+    img: '/img/master-miner.jpeg',
+    title: 'Other Websites...',
+    description: 'Other web projects built with Vue.js',
+    tech: 'Vue.js',
+  },
+  {
+    id: uid(16),
+    img: '/img/logos.jpeg',
+    title: 'Logo Designs',
+    description: 'Other Design projects',
+    tech: 'Illustrator | Photoshop',
   },
 ]
- 
