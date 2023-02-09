@@ -64,7 +64,7 @@ export default function Home() {
             <div>
               <button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
                 view work
-                <span className='hover:rotate-90 duration-300' name='about'>
+                <span className='hover:rotate-90 duration-300' id='about'>
                   <HiArrowNarrowRight className='ml-4' />
                 </span>
               </button>
