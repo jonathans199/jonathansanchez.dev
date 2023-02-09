@@ -63,14 +63,14 @@ export default function Home() {
               I&lsquo;m a full-stack and mobile developer based out of the sunshine state 😎 Florida. &nbsp; I&lsquo;m
               passionate about building modern software solutions with beautiful & functional UI/UX.
             </p>
-            <div>
+            <Link href='/work'>
               <button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
                 view work
                 <span className='hover:rotate-90 duration-300' id='about'>
                   <HiArrowNarrowRight className='ml-4' />
                 </span>
               </button>
-            </div>
+            </Link>
           </div>
         </section>
 
@@ -82,20 +82,23 @@ export default function Home() {
                 <p className='text-4xl font-bold inline border-b-4 border-red-600'>About</p>
               </div>
             </div>
-            <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
-              <p className='sm:text-right text-3xl font-bold'>I&lsquo;m Jonathan, but you could call me Jon</p>
-              <p>
-                As a software engineer passionate about good design and UX, I am committed to creating elegant and
-                user-friendly software solutions that meet the needs of users. I have a strong background in both
-                technical and soft skills, and I bring a unique perspective to my work that emphasizes the importance of
-                aesthetics and usability. <br />
-                <br /> I am self-motivated and driven by a desire to deliver high-quality products that not only meet
-                but exceed user expectations. Whether it&lsquo;s through iterative design processes or creative problem
-                solving, I am always seeking new and innovative ways to improve the user experience.
-                <br />
-                <br />
-                Specialties: Typescript, Javascript, React, React Native, Node.js, Next.js, Mongo, AWS, CSS, HTML
-              </p>
+            <div className='max-w-[1200px] text-right w-full grid sm:grid-cols-2 gap-8 px-4'>
+              <div>
+                <p className='text-3xl font-bold'>I&lsquo;m Jonathan, but you could call me Jon</p>
+                <p>
+                  As a software engineer passionate about good design and UX, I am committed to creating elegant and
+                  user-friendly software solutions that meet the needs of users. I have a strong background in both
+                  technical and soft skills, and I bring a unique perspective to my work that emphasizes the importance
+                  of aesthetics and usability. <br />
+                  <br /> I am self-motivated and driven by a desire to deliver high-quality products that not only meet
+                  but exceed user expectations. Whether it&lsquo;s through iterative design processes or creative
+                  problem solving, I am always seeking new and innovative ways to improve the user experience.
+                  <br />
+                  <br />
+                  Specialties: Typescript, Javascript, React, React Native, Node.js, Next.js, Mongo, AWS, CSS, HTML
+                </p>
+              </div>
+              <img src='/img/jonathan.jpeg' alt='' />
             </div>
           </div>
         </section>

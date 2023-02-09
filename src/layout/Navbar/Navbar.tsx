@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import Link from 'next/link'
 
-import { FaBars, FaTimes, FaGit, FaLinkedin, FaYoutube, FaMedium } from 'react-icons/fa'
+import { FaBars, FaTimes, FaGithub, FaLinkedin, FaYoutube, FaMedium } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 
@@ -14,7 +14,7 @@ export const Navbar = () => {
 
   return (
     <div className='fixed w-full h[80px] flex justify-between items-center p-4 bg-black text-gray-100 z-50'>
-      <Link href='/' className='hover:cursor-pointer'>
+      <Link href='/' className='hover:cursor-pointer hover:scale-110 duration-500'>
         <Image
           className='bg-slate-200 rounded-full'
           src='/jons-logo.png'
@@ -28,7 +28,7 @@ export const Navbar = () => {
       {/* hamburger  */}
       <div onClick={handleMenuToggle} className='z-10'>
         {!nav ? (
-          <FaBars size={25} className=' text-slate-500 hover:text-red-600 hover:scale-110 duration500 cursor-pointer' />
+          <FaBars size={25} className=' text-slate-500 hover:text-red-600 hover:scale-110 duration-500 cursor-pointer' />
         ) : (
           <FaTimes size={20} className='hover:text-red-600 duration-300 cursor-pointer' />
         )}
@@ -89,7 +89,7 @@ export const Navbar = () => {
               className='flex justify-between items-center w-full text-gray-500'
               rel='noreferrer'
               target='_blank'>
-              Github <FaGit size={30} />
+              Github <FaGithub size={30} />
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-slate-900'>
@@ -121,7 +121,7 @@ export const Navbar = () => {
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-slate-900'>
             <a
-              href='#'
+              href='/JonathanSanchez-FullStack-and-Mobile-SoftwareEngineer-Resume-2023.pdf'
               className='flex justify-between items-center w-full text-gray-500'
               rel='noreferrer'
               target='_blank'>

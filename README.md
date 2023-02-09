@@ -1,5 +1,6 @@
 # Portfolio Site
 
+![screenshot](/public/screenshot.png)
 ## Built with
 1. Next.js
 2. Typescript
