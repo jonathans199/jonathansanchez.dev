@@ -7,13 +7,13 @@ const videos = [
   { id: 6, url: 'https://www.youtube.com/embed/c0sWZZ41iIA' },
 ]
 
-const Iframe = ({ item }: any) => {
+const Iframe = ({ url }: { id: number; url: string }) => {
   return (
     <iframe
       className='my-6'
       width='1000'
       height='600'
-      src={item.url}
+      src={url}
       title='YouTube video player'
       allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
   )
@@ -28,7 +28,7 @@ const Tutorials = () => {
         </div>
         <div className='flex flex-col items-center my-8'>
           {videos.map(item => (
-            <Iframe key={item.id} item={item} />
+            <Iframe key={item.id} id={item.id} url={item.url} />
           ))}
         </div>
       </section>
