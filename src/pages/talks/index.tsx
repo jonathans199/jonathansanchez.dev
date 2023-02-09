@@ -7,7 +7,7 @@ const Talks = () => {
         </div>
         <div className='flex flex-col items-center my-8'>
           <div className='presentations'>
-            <img src='/soflodevcon2022.jpeg' alt='' srcset='' width='800px' />
+            <img src='/soflodevcon2022.jpeg' alt='' width='800px' />
             <iframe
               className='my-6'
               width='800'
@@ -15,7 +15,7 @@ const Talks = () => {
               src='https://www.youtube.com/embed/Ojtneh8TV1s'
               title='YouTube video player'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'></iframe>
-            <img src='/techhub.png' alt='' srcset='' width='800px' />
+            <img src='/techhub.png' alt='' width='800px' />
 
             <iframe
               className='my-6'
