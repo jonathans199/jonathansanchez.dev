@@ -109,31 +109,31 @@ export default function Home() {
             <h2 className='text-4xl font-bold inline border-b-4 mb-4 border-red-600'>Skills</h2>
           </div>
           <div className='grid grid-cols-3 sm:grid-cols-4 gap-20 text-center my-8'>
-            <div className='shadow-md shawdow-[#040c16] hover:scale-110 duration500'>
+            <div className='hover:scale-110 duration500'>
               <Icon IconType={Javascript} title='Javascript' />
             </div>
-            <div className='shadow-md shawdow-[#040c16] hover:scale-110 duration500'>
+            <div className='hover:scale-110 duration500'>
               <Icon IconType={ReactIcon} title='React' />
             </div>
-            <div className='shadow-md shawdow-[#040c16] hover:scale-110 duration500'>
+            <div className='hover:scale-110 duration500'>
               <Icon IconType={Css} title='Css' />
             </div>
-            <div className='shadow-md shawdow-[#040c16] hover:scale-110 duration500'>
+            <div className='hover:scale-110 duration500'>
               <Icon IconType={Nextjs} title='Next.js' />
             </div>
-            <div className='shadow-md shawdow-[#040c16] hover:scale-110 duration500'>
+            <div className='hover:scale-110 duration500'>
               <Icon IconType={Html} title='Html' />
             </div>
-            <div className='shadow-md shawdow-[#040c16] hover:scale-110 duration500'>
+            <div className='hover:scale-110 duration500'>
               <Icon IconType={Sass} title='Sass' />
             </div>
-            <div className='shadow-md shawdow-[#040c16] hover:scale-110 duration500'>
+            <div className='hover:scale-110 duration500'>
               <Icon IconType={Node} title='Node' />
             </div>
-            <div className='shadow-md shawdow-[#040c16] hover:scale-110 duration500'>
+            <div className='hover:scale-110 duration500'>
               <Icon IconType={MongoDb} title='MongoDb' />
             </div>
-            <div className='shadow-md shawdow-[#040c16] hover:scale-110 duration500'>
+            <div className='hover:scale-110 duration500'>
               <Icon IconType={Tailwind} title='Tailwind' />
             </div>
           </div>

@@ -14,7 +14,7 @@ export const Navbar = () => {
 
   return (
     <div className='fixed w-full h[80px] flex justify-between items-center p-4 bg-black text-gray-100 z-50'>
-      <Link href='/' className='hover:cursor-pointer hover:scale-110 duration-500'>
+      <Link href='/' className='hover:cursor-pointer hover:scale-110 duration-500 flex items-center'>
         <Image
           className='bg-slate-200 rounded-full'
           src='/jons-logo.png'
@@ -23,6 +23,7 @@ export const Navbar = () => {
           height={37}
           priority
         />
+        <h2 className='ml-1 text-gray-400 text-2xl tracking-widest font-medium'>.JS</h2>
       </Link>
 
       {/* hamburger  */}
@@ -61,6 +62,11 @@ export const Navbar = () => {
           <li className='py-6 text-4xl hover:text-red-600 hover:ml-[-10px] duration-300'>
             <Link href='tutorials' onClick={() => setNav(false)}>
               TUTORIALS
+            </Link>
+          </li>
+          <li className='py-6 text-4xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+            <Link href='talks' onClick={() => setNav(false)}>
+              TALKS
             </Link>
           </li>
           <li className='py-6 text-4xl hover:text-red-600 hover:ml-[-10px] duration-300'>
