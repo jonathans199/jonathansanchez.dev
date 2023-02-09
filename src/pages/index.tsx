@@ -134,14 +134,14 @@ export default function Home() {
           </div>
         </section>
 
-        <div className='scroll' id='work' />
+        {/* <div className='scroll' id='work' />
         <div className='h-screen'>
           <div className='flex flex-col justify-center'>
             <h2 className='text-4xl font-bold inline border-b-4 text-gray-300 border-red-600'>Work</h2>
             <p>checkout some of my work </p>
           </div>
-          <div className='gap-4'>
-            {/* <section>
+          <div className='gap-4'> */}
+        {/* <section>
               <div className='mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8'>
                 <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16'>
                   <div className='relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full'>
@@ -229,23 +229,8 @@ export default function Home() {
               </div>
             </section> */}
 
-            {/* <div
-              className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div
-            '>
-              <div className='opacity-0 group-hover:opacity-100'>
-                <span className='text-2xl font-bold text-white tracking-wider'>test here here abd e=ehjlh</span>
-                <div>
-                  <a href=''>
-                    <button className='text-center rounder-lg px-4 py-3 bg-white'> demo</button>
-                  </a>
-                  <a href=''>
-                    <button className='text-center rounder-lg px-4 py-3 bg-white'> code</button>
-                  </a>
-                </div>
-              </div>
-            </div> */}
-          </div>
-        </div>
+        {/* </div>
+        </div> */}
 
         <div id='contact' className='w-full h-screen flex justify-center items-center p-4'>
           <div className='h-screen '>
