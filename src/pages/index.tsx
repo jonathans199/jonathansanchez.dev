@@ -33,7 +33,7 @@ export default function Home() {
       <div className='max-w-[1200px] mx-auto px-4'>
         <section className='h-screen ' id='top'>
           <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-            <p className='text-2xl text-red-600'>Hola, my name is</p>
+            <p className='text-2xl text-red-600'>Hi my name is</p>
             <h1 className='text-4xl  sm:text-7xl font-bold text-[#ccd6f6]'>Jonathan Sanchez</h1>
 
             <h2 className='text-2xl sm:text-5xl font-bold text-[#8892b0]'>
@@ -57,8 +57,8 @@ export default function Home() {
               />
             </h2>
             <p className='text-xl text-[#8892b0] py-4 max-w-[700px]'>
-              I&lsquo;m a full-stack and mobile developer based out of the sunshine state 😎 Florida. &nbsp; I&lsquo;m
-              passionate about building modern software solutions with beautiful & functional UI/UX.
+              As a full-stack and mobile developer based in sunny Florida, I am dedicated to creating modern software
+              solutions with visually appealing and user-friendly UI/UX.
             </p>
             <Link href='/work'>
               <button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
@@ -71,7 +71,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div  className='scroll' id='about' />
+        <div className='scroll' id='about' />
         <section className='h-screen min'>
           <div className='flex flex-col justify-center items-center'>
             <div className='max-w-[1000px] w-full px-4 grid grid-cols-2 gap-8'>
@@ -81,15 +81,19 @@ export default function Home() {
             </div>
             <div className='max-w-[1200px] text-right w-full grid sm:grid-cols-2 gap-8 px-4'>
               <div>
-                <p className='text-3xl font-bold'>I&lsquo;m Jonathan, but you could call me Jon</p>
+                <p className='text-3xl font-bold'>
+                  <q>Ready Fire, Aim</q>
+                </p>
                 <p>
                   As a software engineer passionate about good design and UX, I am committed to creating elegant and
-                  user-friendly software solutions that meet the needs of users. I have a strong background in both
-                  technical and soft skills, and I bring a unique perspective to my work that emphasizes the importance
-                  of aesthetics and usability. <br />
-                  <br /> I am self-motivated and driven by a desire to deliver high-quality products that not only meet
-                  but exceed user expectations. Whether it&lsquo;s through iterative design processes or creative
-                  problem solving, I am always seeking new and innovative ways to improve the user experience.
+                  user-friendly software solutions. Having a strong background in technical skill and accompanied design
+                  appreciation, I bring a unique perspective to my work that emphasizes the importance of aesthetics and
+                  usability. <br />
+                  <br />
+                  I&lsquo;m a self-starter with a passion for delivering top-notch products that go above and beyond
+                  what people expect. I love figuring out new and innovative ways to make the user experience even
+                  better, whether that&lsquo;s by tweaking the design or coming up with clever solutions to tough
+                  problems.
                   <br />
                   <br />
                   Specialties: Typescript, Javascript, React, React Native, Node.js, Next.js, Mongo, AWS, CSS, HTML
@@ -162,7 +166,7 @@ export default function Home() {
             <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
               <h2 className='text-4xl font-bold inline border-b-4 border-red-600 mb-4'>Contact</h2>
               <p className='text-xl text-[#8892b0] py-4 max-w-[700px]'>
-                Lets collaborate on your project and change the world one screen at a time..... 🌎
+                Lets collaborate on your project and change the world one screen at a time.
               </p>
 
               <a href='mailto:jonathans199@gmail.com'>
