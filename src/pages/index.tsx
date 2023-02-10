@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { Inter } from '@next/font/google'
 
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { TypeAnimation } from 'react-type-animation'
@@ -21,13 +20,11 @@ import Sass from './../components/icons/Sass'
 import Tailwind from './../components/icons/Tailwind'
 import Css from './../components/icons/Css'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Jonathan Sanchez \ Dev</title>
+        <title>Jonathan Sanchez \ FullStack & Mobile Software Engineer</title>
         <meta name='description' content='Welcome to my portfolio site build with React in Next.js' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
