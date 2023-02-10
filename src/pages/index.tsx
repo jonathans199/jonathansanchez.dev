@@ -63,7 +63,7 @@ export default function Home() {
             <Link href='/work'>
               <button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
                 view work
-                <span className='hover:rotate-90 duration-300' id='about'>
+                <span className='hover:rotate-90 duration-300'>
                   <HiArrowNarrowRight className='ml-4' />
                 </span>
               </button>
@@ -71,7 +71,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className='scroll' id='about' />
+        <div  className='scroll' id='about' />
         <section className='h-screen min'>
           <div className='flex flex-col justify-center items-center'>
             <div className='max-w-[1000px] w-full px-4 grid grid-cols-2 gap-8'>
