@@ -2,7 +2,7 @@ import { FaGithub } from 'react-icons/fa'
 
 export default function Footer() {
   return (
-    <footer className='text-center py-4 text-slate-500 flex flex-col items-center space-y-2'>
+    <footer className='h-screen text-center py-4 text-slate-500 flex flex-col items-center space-y-2 bottom-0'>
       <a href='https://github.com/jonathans199/jonathansanchez.dev' className='hover:text-red-200'>
         <FaGithub size={30} />
       </a>

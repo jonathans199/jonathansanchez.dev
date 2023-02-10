@@ -103,6 +103,27 @@ export default function Home() {
           </div>
         </section>
 
+        <div className='scroll' id='work' />
+        <div className=''>
+          <div className='flex flex-col justify-center'>
+            <h2 className='text-4xl font-bold inline border-b-4 text-gray-300 border-red-600'>Work</h2>
+            <p>checkout some of my work </p>
+          </div>
+          <section className='max-w-[1200px] mx-auto'>
+            {projects.slice(0, 3).map(item => (
+              <WorkItem key={item.id} item={item} />
+            ))}
+          </section>
+          <Link href='/work'>
+            <button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
+              View More work
+              <span className='hover:rotate-90 duration-300'>
+                <HiArrowNarrowRight className='ml-4' />
+              </span>
+            </button>
+          </Link>
+        </div>
+
         <div className='scroll' id='skills' />
         <section className='h-screen min-h-screen'>
           <div className='flex flex-col  justify-center'>
@@ -138,27 +159,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <div className='scroll' id='work' />
-        <div className=''>
-          <div className='flex flex-col justify-center'>
-            <h2 className='text-4xl font-bold inline border-b-4 text-gray-300 border-red-600'>Work</h2>
-            <p>checkout some of my work </p>
-          </div>
-          <section className='max-w-[1200px] mx-auto'>
-            {projects.slice(0, 3).map(item => (
-              <WorkItem key={item.id} item={item} />
-            ))}
-          </section>
-          <Link href='/work'>
-            <button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
-              View More work
-              <span className='hover:rotate-90 duration-300'>
-                <HiArrowNarrowRight className='ml-4' />
-              </span>
-            </button>
-          </Link>
-        </div>
 
         <div id='contact' className='w-full h-screen flex justify-center items-center p-4'>
           <div className='h-screen '>
