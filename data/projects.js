@@ -1,8 +1,5 @@
 import { uid } from 'uid'
 
-const id = uid(16)
-console.log(id)
-
 export const projects = [
   {
     id: uid(16),

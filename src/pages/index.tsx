@@ -19,6 +19,7 @@ import Nextjs from './../components/icons/Next'
 import Sass from './../components/icons/Sass'
 import Tailwind from './../components/icons/Tailwind'
 import Css from './../components/icons/Css'
+import Aws from '../components/icons/Aws'
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Navbar />
-      <div className='max-w-[1200px] mx-auto px-4'>
+      <div className='max-w-[1200px] mx-auto px-4 h-full'>
         <section className='h-screen ' id='top'>
           <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
             <p className='text-2xl text-red-600'>Hi my name is</p>
@@ -157,6 +158,9 @@ export default function Home() {
             </div>
             <div className='hover:scale-110 duration500'>
               <Icon IconType={Tailwind} title='Tailwind' />
+            </div>
+            <div className='hover:scale-110 duration500'>
+              <Icon IconType={Aws} title='Aws' />
             </div>
           </div>
         </section>
