@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { TypeAnimation } from 'react-type-animation'
@@ -8,9 +9,11 @@ import { TypeAnimation } from 'react-type-animation'
 import { Navbar } from '@/layout/Navbar/Navbar'
 import { WorkItem } from '@/components/WorkItem'
 import { projects } from '@/../data/projects'
+import { contributions } from '@/../data/contributions'
 
 import Icon from './../components/icons/index'
 import Javascript from './../components/icons/Javascript'
+// import Typescript from '../components/icons/Typescript'
 import ReactIcon from './../components/icons/React'
 import Node from './../components/icons/Node'
 import Html from './../components/icons/Html'
@@ -20,6 +23,8 @@ import Sass from './../components/icons/Sass'
 import Tailwind from './../components/icons/Tailwind'
 import Css from './../components/icons/Css'
 import Aws from '../components/icons/Aws'
+
+import typescript from './../../public/typescript.svg'
 
 export default function Home() {
 	return (
@@ -109,14 +114,13 @@ export default function Home() {
 					</div>
 				</section>
 
-				<div className='scroll' id='work' />
-				<div className=''>
+				<section className='min-h-full bottom-margin-large' id='work'>
 					<div className='flex flex-col justify-center'>
 						<h2 className='text-4xl font-bold inline border-b-4 text-gray-300 border-red-600'>Work</h2>
 						<p>checkout some of my work </p>
 					</div>
 					<section className='max-w-[1200px] mx-auto'>
-						{projects.slice(0, 3).map(item => (
+						{projects?.slice(0, 5).map(item => (
 							<WorkItem key={item.id} item={item} />
 						))}
 					</section>
@@ -128,16 +132,31 @@ export default function Home() {
 							</span>
 						</button>
 					</Link>
-				</div>
-
+				</section>
 				<div className='scroll' id='skills' />
-				<section className='h-screen min-h-screen'>
+				<section className='bottom-margin-large'>
 					<div className='flex flex-col  justify-center'>
 						<h2 className='text-4xl font-bold inline border-b-4 mb-4 border-red-600'>Skills</h2>
 					</div>
 					<div className='grid grid-cols-3 sm:grid-cols-4 gap-20 text-center my-8'>
 						<div className='hover:scale-110 duration500'>
 							<Icon IconType={Javascript} title='Javascript' />
+						</div>
+						<div className='hover:scale-110 duration500 items-center flex justify-start p-0 flex-col mb-4 mr-0sm:h-auto'>
+							<Image
+								src={typescript}
+								width={128}
+								height={128}
+								alt='Typescript'
+								className={`w-16 text-slate-500 sm:w-36 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0`}
+							/>
+							<p
+								className={`mt-4 text-slate-500 font-semibold tracking-wide opacity-100 normal-case text-2xl text-center`}>
+								Typescript
+							</p>
+						</div>
+						<div className='hover:scale-110 duration500'>
+							<Icon IconType={Node} title='Node' />
 						</div>
 						<div className='hover:scale-110 duration500'>
 							<Icon IconType={ReactIcon} title='React' />
@@ -155,9 +174,6 @@ export default function Home() {
 							<Icon IconType={Sass} title='Sass' />
 						</div>
 						<div className='hover:scale-110 duration500'>
-							<Icon IconType={Node} title='Node' />
-						</div>
-						<div className='hover:scale-110 duration500'>
 							<Icon IconType={MongoDb} title='MongoDb' />
 						</div>
 						<div className='hover:scale-110 duration500'>
@@ -168,27 +184,27 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
-				{/* 
-        <div className='scroll' id='collaboration' />
-				<div className=''>
+				{/* <div className='min-h-full bottom-margin-large'></div> */}
+				<div className='scroll' id='contributions' />
+				<div>
 					<div className='flex flex-col justify-center'>
-						<h2 className='text-4xl font-bold inline border-b-4 text-gray-300 border-red-600'>Collaborations</h2>
+						<h2 className='text-4xl font-bold inline border-b-4 text-gray-300 border-red-600'>Contributions</h2>
 						<p>checkout some of my work </p>
 					</div>
 					<section className='max-w-[1200px] mx-auto'>
-						{projects.slice(0, 3).map(item => (
+						{contributions.slice(0, 3).map(item => (
 							<WorkItem key={item.id} item={item} />
 						))}
 					</section>
-					<Link href='/work'>
+					{/* <Link href='/work'>
 						<button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
 							View More work
 							<span className='hover:rotate-90 duration-300'>
 								<HiArrowNarrowRight className='ml-4' />
 							</span>
 						</button>
-					</Link>
-				</div> */}
+					</Link> */}
+				</div>
 
 				<div id='contact' className='w-full h-screen flex justify-center items-center p-4'>
 					<div className='h-screen '>

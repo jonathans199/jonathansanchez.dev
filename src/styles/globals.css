@@ -65,5 +65,10 @@ a {
 }
 
 .scroll {
-  margin-bottom: 10%;
+  margin-bottom: 600px;
+  /* margin-top: 50%; */
+}
+
+.bottom-margin-large {
+	margin-bottom: 30rem !important;
 }

@@ -40,7 +40,7 @@ export const Navbar = () => {
 
 			{/* Menu */}
 			<div
-				className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-black flex flex-col items-center pt-40'}>
+				className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-black flex flex-col items-center pt-32'}>
 				<ul>
 					<li className='py-6 text-4xl hover:text-red-600 hover:ml-[-10px] duration-300'>
 						<Link href='/#top' onClick={() => setNav(false)}>
@@ -67,11 +67,16 @@ export const Navbar = () => {
 							TUTORIALS
 						</Link>
 					</li>
-					{/* <li className='py-6 text-4xl hover:text-red-600 hover:ml-[-10px] duration-300'>
-            <Link href='contributions' onClick={() => setNav(false)}>
-              CONTRIBUTIONS
-            </Link>
-          </li> */}
+					<li className='py-6 text-4xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+						<Link href='/packages' onClick={() => setNav(false)}>
+							PACKAGES
+						</Link>
+					</li>
+					<li className='py-6 text-4xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+						<Link href='/#contributions' onClick={() => setNav(false)}>
+							CONTRIBUTIONS
+						</Link>
+					</li>
 					<li className='py-6 text-4xl hover:text-red-600 hover:ml-[-10px] duration-300'>
 						<Link href='talks' onClick={() => setNav(false)}>
 							PRESENTATIONS
