@@ -7,7 +7,7 @@ export default function Footer() {
         <FaGithub size={30} />
       </a>
       <div className='flex justify-center'>
-        <span>Designed and Build by Jonathan Sanchez</span>
+        <span>Designed and Built by Jonathan Sanchez</span>
       </div>
       <small>Copyright © 2023</small>
     </footer>
