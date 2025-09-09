@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { TypeAnimation } from 'react-type-animation'
@@ -11,20 +10,7 @@ import { WorkItem } from '@/components/WorkItem'
 import { projects } from '@/../data/projects'
 import { contributions } from '@/../data/contributions'
 
-import Icon from './../components/icons/index'
-import Javascript from './../components/icons/Javascript'
-// import Typescript from '../components/icons/Typescript'
-import ReactIcon from './../components/icons/React'
-import Node from './../components/icons/Node'
-import Html from './../components/icons/Html'
-import MongoDb from './../components/icons/MongoDb'
-import Nextjs from './../components/icons/Next'
-import Sass from './../components/icons/Sass'
-import Tailwind from './../components/icons/Tailwind'
-import Css from './../components/icons/Css'
-import Aws from '../components/icons/Aws'
-
-import typescript from './../../public/typescript.svg'
+import TechIcon from '@/components/TechIcon'
 
 export default function Home() {
 	return (
@@ -39,23 +25,23 @@ export default function Home() {
 			<div className='max-w-[1200px] mx-auto px-4 h-full'>
 				<section className='h-screen ' id='top'>
 					<div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-						<p className='text-2xl text-red-600'>Hi my name is</p>
+						<p className='text-2xl text-red-600'>Hi 👋, my name is</p>
 						<h1 className='text-4xl  sm:text-7xl font-bold text-[#ccd6f6]'>Jonathan Sanchez</h1>
 
 						<h2 className='text-2xl sm:text-5xl font-bold text-[#8892b0]'>
 							<TypeAnimation
 								sequence={[
-									'Full-Stack Engineer 👨‍💻',
+									'Full-Stack Software Engineer 👨‍💻',
 									2000,
-									'Mobile Software Engineer 📱',
+									'Hands-on CTO 🚀',
+									2000,
+									'Mobile Application Engineer 📱',
 									2000,
 									'Girl Dad 👯‍♀️',
 									2000,
-									'Believer 🙏',
-									2000,
 									'Drummer 🥁',
 									2000,
-									'Educator 👨‍🏫',
+									'Team Leader 👨‍🏫',
 									2000,
 									'Dog Lover 🐶',
 									2000,
@@ -63,12 +49,10 @@ export default function Home() {
 								wrapper='div'
 								cursor={true}
 								repeat={Infinity}
-								// style={{ fontSize: '2em' }}
 							/>
 						</h2>
-						<p className='text-xl text-[#8892b0] py-4 max-w-[700px]'>
-							As a full-stack and mobile developer based in sunny Florida, I am dedicated to creating modern software
-							solutions with visually appealing and user-friendly UI/UX.
+						<p className='text-xl text-[#8892b0] py-4'>
+						🚀 Software Engineer with 11 years of experience turning complex challenges into simple, impactful solutions. I’ve helped companies grow by building products that delight users, scale with demand, and make a real difference in how people work and live. Passionate about blending creativity with problem-solving to deliver results that last.
 						</p>
 						<Link href='/work'>
 							<button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
@@ -95,18 +79,17 @@ export default function Home() {
 									<q>Ready Fire, Aim</q>
 								</p>
 								<p>
-									As a software engineer passionate about good design and UX, I am committed to creating elegant and
-									user-friendly software solutions. Having a strong background in technical skill and accompanied design
-									appreciation, I bring a unique perspective to my work that emphasizes the importance of aesthetics and
-									usability. <br />
+									As a software engineer, I am committed to creating elegant, reliable, and practical software
+									solutions. With a strong technical background and a focus on scalability and robustness, I bring a
+									unique perspective to my work that ensures dependable and high-performing systems. <br />
 									<br />
-									I&lsquo;m a self-starter with a passion for delivering top-notch products that go above and beyond
-									what people expect. I love figuring out new and innovative ways to make the user experience even
-									better, whether that&lsquo;s by tweaking the design or coming up with clever solutions to tough
-									problems.
+									I&lsquo;m a self-starter with a passion for delivering exceptional products that exceed expectations.
+									I thrive on discovering innovative ways to enhance the user experience, whether through refining
+									design elements or devising clever solutions to challenging problems.
 									<br />
 									<br />
-									Specialties: Typescript, Javascript, React, React Native, Node.js, Next.js, Mongo, AWS, CSS, HTML
+									Specialties: Typescript, Javascript, React, React Native, Node.js, Next.js, Mongo, AWS, CSS, HTML,
+									Tailwind, Sass, AWS and more
 								</p>
 							</div>
 							<img src='/img/jonathan.jpeg' alt='' />
@@ -135,53 +118,26 @@ export default function Home() {
 				</section>
 				<div className='scroll' id='skills' />
 				<section className='bottom-margin-large'>
-					<div className='flex flex-col  justify-center'>
+					<div className='flex flex-col justify-center'>
 						<h2 className='text-4xl font-bold inline border-b-4 mb-4 border-red-600'>Skills</h2>
 					</div>
-					<div className='grid grid-cols-3 sm:grid-cols-4 gap-20 text-center my-8'>
-						<div className='hover:scale-110 duration500'>
-							<Icon IconType={Javascript} title='Javascript' />
-						</div>
-						<div className='hover:scale-110 duration500 items-center flex justify-start p-0 flex-col mb-4 mr-0sm:h-auto'>
-							<Image
-								src={typescript}
-								width={128}
-								height={128}
-								alt='Typescript'
-								className={`w-16 text-slate-500 sm:w-36 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0`}
-							/>
-							<p
-								className={`mt-4 text-slate-500 font-semibold tracking-wide opacity-100 normal-case text-2xl text-center`}>
-								Typescript
-							</p>
-						</div>
-						<div className='hover:scale-110 duration500'>
-							<Icon IconType={Node} title='Node' />
-						</div>
-						<div className='hover:scale-110 duration500'>
-							<Icon IconType={ReactIcon} title='React' />
-						</div>
-						<div className='hover:scale-110 duration500'>
-							<Icon IconType={Css} title='Css' />
-						</div>
-						<div className='hover:scale-110 duration500'>
-							<Icon IconType={Nextjs} title='Next.js' />
-						</div>
-						<div className='hover:scale-110 duration500'>
-							<Icon IconType={Html} title='Html' />
-						</div>
-						<div className='hover:scale-110 duration500'>
-							<Icon IconType={Sass} title='Sass' />
-						</div>
-						<div className='hover:scale-110 duration500'>
-							<Icon IconType={MongoDb} title='MongoDb' />
-						</div>
-						<div className='hover:scale-110 duration500'>
-							<Icon IconType={Tailwind} title='Tailwind' />
-						</div>
-						<div className='hover:scale-110 duration500'>
-							<Icon IconType={Aws} title='Aws' />
-						</div>
+					<div className='grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-8 sm:gap-12 text-center my-8'>
+						<TechIcon name='JavaScript' />
+						<TechIcon name='TypeScript' />
+						<TechIcon name='React' />
+						<TechIcon name='React Native' />
+						<TechIcon name='Node' />
+						<TechIcon name='Next.js' />
+						<TechIcon name='HTML' />
+						<TechIcon name='CSS' />
+						<TechIcon name='Sass' />
+						<TechIcon name='Tailwind' />
+						<TechIcon name='MongoDB' />
+						<TechIcon name='Express' />
+						<TechIcon name='AWS' />
+						<TechIcon name='Firebase' />
+						<TechIcon name='Bootstrap' />
+						<TechIcon name='Expo' />
 					</div>
 				</section>
 				{/* <div className='min-h-full bottom-margin-large'></div> */}
@@ -211,12 +167,8 @@ export default function Home() {
 						<div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
 							<h2 className='text-4xl font-bold inline border-b-4 border-red-600 mb-4'>Contact</h2>
 							<p className='text-xl text-[#8892b0] py-4 max-w-[700px]'>
-								Lets collaborate on your project and change the world one screen at a time.
+								Feel free to reach out and let's collaborate on your project. We can make a difference together!
 							</p>
-
-							<a href='mailto:jonathans199@gmail.com'>
-								<h2 className='text-2xl sm:text-2xl font-bold text-[#8892b0]'>jonathans199@gmail.com</h2>
-							</a>
 						</div>
 					</div>
 

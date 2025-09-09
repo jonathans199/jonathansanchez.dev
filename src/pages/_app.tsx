@@ -12,11 +12,13 @@ import Layout from '@/layout'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${montserrat.variable} font-sans`}>
-      <Layout>
-        <div className={styles.center}></div>
-        <Component {...pageProps} className='max-w-[1200px] mx-auto px-4' />
-      </Layout>
-    </main>
+    <div className="dark">
+      <main className={`${montserrat.variable} font-sans`}>
+        <Layout>
+          <div className={styles.center}></div>
+          <Component {...pageProps} className='max-w-[1200px] mx-auto px-4' />
+        </Layout>
+      </main>
+    </div>
   )
 }

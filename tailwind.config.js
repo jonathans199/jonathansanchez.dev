@@ -2,6 +2,7 @@ const { fontFamily } = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
+  darkMode: 'class', // Enable dark mode via class
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
