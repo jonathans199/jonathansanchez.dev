@@ -16,8 +16,8 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Jonathan Sanchez \ FullStack & Mobile Software Engineer</title>
-				<meta name='description' content='Welcome to my portfolio site built with React in Next.js' />
+				<title>Jonathan Sanchez \ Expert Software Architect with a passion for creating innovative and scalable solutions'</title>
+				<meta name='description' content='Expert Software Architect with a passion for creating innovative and scalable solutions' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
@@ -31,19 +31,19 @@ export default function Home() {
 						<h2 className='text-2xl sm:text-5xl font-bold text-[#8892b0]'>
 							<TypeAnimation
 								sequence={[
-									'Full-Stack Software Engineer 👨‍💻',
+									'Software Architect 🏯',
 									2000,
 									'Hands-on CTO 🚀',
 									2000,
-									'Mobile Application Engineer 📱',
+									'Mobile Software Engineer 📱',
 									2000,
-									'Girl Dad 👯‍♀️',
+									'Full-Stack Software Engineer 👨‍💻',
+									2000,
+									'Experienced Ecommerce and PIM Professional 🛍️',
+									2000,
+									'Volleyball Player 🏐',
 									2000,
 									'Drummer 🥁',
-									2000,
-									'Team Leader 👨‍🏫',
-									2000,
-									'Dog Lover 🐶',
 									2000,
 								]}
 								wrapper='div'
@@ -52,7 +52,7 @@ export default function Home() {
 							/>
 						</h2>
 						<p className='text-xl text-[#8892b0] py-4'>
-						🚀 Software Engineer with 11 years of experience turning complex challenges into simple, impactful solutions. I’ve helped companies grow by building products that delight users, scale with demand, and make a real difference in how people work and live. Passionate about blending creativity with problem-solving to deliver results that last.
+						🚀 Software Engineer and Software Architect with 11 years of experience turning complex challenges into simple, impactful solutions. I’ve helped companies grow by building products that delight users, scale with demand, and make a real difference in how people work and live. Passionate about blending creativity with problem-solving to deliver results that last. 💡 I'm also a software architect who's skilled in designing and implementing scalable, maintainable, and high-performing software systems.
 						</p>
 						<Link href='/work'>
 							<button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
@@ -121,7 +121,7 @@ export default function Home() {
 					<div className='flex flex-col justify-center'>
 						<h2 className='text-4xl font-bold inline border-b-4 mb-4 border-red-600'>Skills</h2>
 					</div>
-					<div className='grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-8 sm:gap-12 text-center my-8'>
+					<div className='grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 sm:gap-8 text-center my-8'>
 						<TechIcon name='JavaScript' />
 						<TechIcon name='TypeScript' />
 						<TechIcon name='React' />
@@ -135,7 +135,12 @@ export default function Home() {
 						<TechIcon name='MongoDB' />
 						<TechIcon name='Express' />
 						<TechIcon name='AWS' />
+						<TechIcon name='GCP' />
 						<TechIcon name='Firebase' />
+						<TechIcon name='Supabase' />
+						<TechIcon name='Ruby' />
+						<TechIcon name='Ruby on Rails' />
+						<TechIcon name='Shopify' />
 						<TechIcon name='Bootstrap' />
 						<TechIcon name='Expo' />
 					</div>
