@@ -16,7 +16,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Jonathan Sanchez \ Expert Software Architect with a passion for creating innovative and scalable solutions'</title>
+				<title>Jonathan Sanchez \ Expert Software Architect with a passion for creating innovative and scalable solutions</title>
 				<meta name='description' content='Expert Software Architect with a passion for creating innovative and scalable solutions' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
@@ -52,7 +52,7 @@ export default function Home() {
 							/>
 						</h2>
 						<p className='text-xl text-[#8892b0] py-4'>
-						🚀 Software Engineer and Software Architect with 11 years of experience turning complex challenges into simple, impactful solutions. I’ve helped companies grow by building products that delight users, scale with demand, and make a real difference in how people work and live. Passionate about blending creativity with problem-solving to deliver results that last. 💡 I'm also a software architect who's skilled in designing and implementing scalable, maintainable, and high-performing software systems.
+						🚀 Software Engineer and Software Architect with 11 years of experience turning complex challenges into simple, impactful solutions. I&apos;ve helped companies grow by building products that delight users, scale with demand, and make a real difference in how people work and live. Passionate about blending creativity with problem-solving to deliver results that last. 💡 I&apos;m also a software architect who&apos;s skilled in designing and implementing scalable, maintainable, and high-performing software systems.
 						</p>
 						<Link href='/work'>
 							<button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
@@ -172,7 +172,7 @@ export default function Home() {
 						<div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
 							<h2 className='text-4xl font-bold inline border-b-4 border-red-600 mb-4'>Contact</h2>
 							<p className='text-xl text-[#8892b0] py-4 max-w-[700px]'>
-								Feel free to reach out and let's collaborate on your project. We can make a difference together!
+								Feel free to reach out and let&apos;s collaborate on your project. We can make a difference together!
 							</p>
 						</div>
 					</div>
