@@ -12,9 +12,7 @@ const videos = [
 const Iframe = ({ url }: { id: number; url: string }) => {
   return (
     <iframe
-      className='my-6'
-      width='1000'
-      height='600'
+      className='my-6 w-full max-w-[800px] aspect-video'
       src={url}
       title='YouTube video player'
       allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
@@ -25,16 +23,16 @@ const Tutorials = () => {
   return (
     <>
       <Head>
-        <title>Jonathan Sanchez \ Portfolio items</title>
-        <meta name='description' content='Welcome to my portfolio site built with React in Next.js' />
+        <title>Jonathan Sanchez - Tutorials | Programming & Development Videos</title>
+        <meta name='description' content='Watch Jonathan Sanchez&apos;s programming tutorials and development videos covering various technologies and best practices.' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <section className='max-w-[1200px] mx-auto pt-40'>
-        <section className='h-screen min-h-screen h-full'>
-          <div className='flex flex-col  justify-center'>
-            <h2 className='text-6xl font-bold inline border-b-4 mb-4 border-red-600'>Tutorials</h2>
+      <section className='max-w-[1200px] mx-auto pt-40 px-4'>
+        <section className='min-h-screen'>
+          <div className='flex flex-col justify-center'>
+            <h2 className='text-4xl sm:text-6xl font-bold inline border-b-4 mb-4 border-red-600'>Tutorials</h2>
           </div>
           <div className='flex flex-col items-center my-8'>
             {videos.map(item => (

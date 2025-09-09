@@ -5,12 +5,11 @@ import Link from 'next/link'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { TypeAnimation } from 'react-type-animation'
 
-import { Navbar } from '@/layout/Navbar/Navbar'
 import { WorkItem } from '@/components/WorkItem'
 import { projects } from '@/../data/projects'
 import { contributions } from '@/../data/contributions'
 
-import TechIcon from '@/components/TechIcon'
+import Skills from '@/components/Skills'
 
 export default function Home() {
 	return (
@@ -21,7 +20,6 @@ export default function Home() {
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<Navbar />
 			<div className='max-w-[1200px] mx-auto px-4 h-full'>
 				<section className='h-screen ' id='top'>
 					<div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
@@ -117,35 +115,7 @@ export default function Home() {
 					</Link>
 				</section>
 				<div className='scroll' id='skills' />
-				<section className='bottom-margin-large'>
-					<div className='flex flex-col justify-center'>
-						<h2 className='text-4xl font-bold inline border-b-4 mb-4 border-red-600'>Skills</h2>
-					</div>
-					<div className='grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 sm:gap-8 text-center my-8'>
-						<TechIcon name='JavaScript' />
-						<TechIcon name='TypeScript' />
-						<TechIcon name='React' />
-						<TechIcon name='React Native' />
-						<TechIcon name='Node' />
-						<TechIcon name='Next.js' />
-						<TechIcon name='HTML' />
-						<TechIcon name='CSS' />
-						<TechIcon name='Sass' />
-						<TechIcon name='Tailwind' />
-						<TechIcon name='MongoDB' />
-						<TechIcon name='Express' />
-						<TechIcon name='AWS' />
-						<TechIcon name='GCP' />
-						<TechIcon name='Firebase' />
-						<TechIcon name='Supabase' />
-						<TechIcon name='Ruby' />
-						<TechIcon name='Ruby on Rails' />
-						<TechIcon name='Shopify' />
-						<TechIcon name='Bootstrap' />
-						<TechIcon name='Expo' />
-					</div>
-				</section>
-				{/* <div className='min-h-full bottom-margin-large'></div> */}
+				<Skills />
 				<div className='scroll' id='contributions' />
 				<div>
 					<div className='flex flex-col justify-center'>

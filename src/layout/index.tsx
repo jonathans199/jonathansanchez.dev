@@ -4,7 +4,7 @@ import Footer from './Footer'
 export default function Layout({ children }: any) {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       {children}
       <Footer />
     </>
