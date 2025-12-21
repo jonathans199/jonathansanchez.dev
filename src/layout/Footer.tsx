@@ -1,4 +1,5 @@
 import { FaGithub } from 'react-icons/fa'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -8,6 +9,11 @@ export default function Footer() {
       </a>
       <div className='flex justify-center'>
         <span>Designed and Built by Jonathan Sanchez</span>
+      </div>
+      <div className='flex justify-center'>
+        <Link href='/privacy-policy' className='hover:text-red-600 duration-300'>
+          Privacy Policy
+        </Link>
       </div>
       <small>Copyright © 2023</small>
     </footer>

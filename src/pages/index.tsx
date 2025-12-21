@@ -10,6 +10,7 @@ import { projects } from '@/../data/projects'
 import { contributions } from '@/../data/contributions'
 
 import Skills from '@/components/Skills'
+import ContactForm from '@/components/ContactForm'
 
 export default function Home() {
 	return (
@@ -137,35 +138,8 @@ export default function Home() {
 					</Link> */}
 				</div>
 
-				<div id='contact' className='w-full h-screen flex justify-center items-center p-4'>
-					<div className='h-screen '>
-						<div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-							<h2 className='text-4xl font-bold inline border-b-4 border-red-600 mb-4'>Contact</h2>
-							<p className='text-xl text-[#8892b0] py-4 max-w-[700px]'>
-								Feel free to reach out and let&apos;s collaborate on your project. We can make a difference together!
-							</p>
-						</div>
-					</div>
-
-					{/* <form action='' className='flex flex-col max-w-[600px] w-full'>
-            <div
-              className='pb-8
-            '>
-              <p className='text-4xl font-bold inline border-b-4 border-red-600 text-gray-300'> Contact</p>
-              <p>
-                {' '}
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed cumque laudantium in beatae officia sequi
-                esse accusantium amet ipsum alias nulla, voluptas, asperiores nam molestiae nostrum neque. Iure,
-                voluptatibus. Ducimus!
-              </p>
-            </div>
-            <input className='p-2 bg-[#ccd6f6]' type='text' placeholder='Name' name='name' />
-            <input className='my-4 p-2 bg-[#ccd6f6]' type='email' placeholder='Email' name='email' />
-            <textarea className='p-2 bg-[#ccd6f6]' name='' id='' cols='30' rows='10'></textarea>
-            <button className='text-white border-2 hover:bg-red-600 hover:border-red-600 px-4 py-3'>
-              Lets Collaborate
-            </button>
-          </form> */}
+				<div id='contact' className='w-full flex justify-center items-center p-4 py-20'>
+					<ContactForm />
 				</div>
 			</div>
 		</>
