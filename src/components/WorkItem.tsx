@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { FaGithub, FaLink, FaApple } from 'react-icons/fa'
+import Image from 'next/image'
+import { FaGithub, FaLink, FaApple, FaEye } from 'react-icons/fa'
 
 export const WorkItem = ({ item }: any) => {
   return (
@@ -12,6 +13,19 @@ export const WorkItem = ({ item }: any) => {
           <h5 className='mb-4 text-4xl font-extrabold leading-none'>{item.title}</h5>
           <p className='mb-6 text-gray-300'>{item.description}</p>
           {item.tech && <p className='mb-6 text-sm text-white-400 text-xl'>{item.tech}</p>}
+          
+          {/* View Details Button */}
+          {item.slug && (
+            <div className='mb-6'>
+              <Link
+                href={`/projects/${item.slug}`}
+                className='inline-flex items-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors duration-300 font-medium'>
+                <FaEye className='mr-2' />
+                View Details
+              </Link>
+            </div>
+          )}
+          
           <hr className='mb-5 border-gray-300' />
           <div className='flex justify-end items-center space-x-4'>
             {item.ios && (

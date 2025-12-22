@@ -74,21 +74,26 @@ export default function Home() {
 						</div>
 						<div className='max-w-[1200px] text-right w-full grid sm:grid-cols-2 gap-8 px-4'>
 							<div>
-								<p className='text-3xl font-bold'>
-									<q>Ready Fire, Aim</q>
+								<p className='text-3xl font-bold mb-4'>
+									<q>Launch Early, Iterate Fast</q>
 								</p>
 								<p>
-									As a software engineer, I am committed to creating elegant, reliable, and practical software
-									solutions. With a strong technical background and a focus on scalability and robustness, I bring a
-									unique perspective to my work that ensures dependable and high-performing systems. <br />
+									As a hands-on CTO and software architect, I specialize in building scalable systems and leading 
+									high-performing engineering teams. With AWS certifications and a proven track record of delivering 
+									production-grade applications, I architect solutions that balance technical excellence with rapid 
+									market validation. <br />
 									<br />
-									I&lsquo;m a self-starter with a passion for delivering exceptional products that exceed expectations.
-									I thrive on discovering innovative ways to enhance the user experience, whether through refining
-									design elements or devising clever solutions to challenging problems.
+									I believe in launching early prototypes and iterating based on real user feedback rather than 
+									pursuing perfection in isolation. My experience spans AI/ML implementations using LangChain, 
+									RAG systems, and modern LLM integrations, combined with robust cloud infrastructure and 
+									team leadership that drives tangible business outcomes.
 									<br />
 									<br />
-									Specialties: Typescript, Javascript, React, React Native, Node.js, Next.js, Mongo, AWS, CSS, HTML,
-									Tailwind, Sass, AWS and more
+									<b>Specialties:</b>  Systems Architecture, Team Leadership, AI/ML (LangChain, RAG), AWS & GCP Cloud Solutions, 
+									PIM & E-commerce Systems (Akeneo, Shopify), TypeScript, React, React Native, Ruby on Rails, 
+									Node.js, Next.js, SQL & NoSQL Databases, Mobile App Development, and Production Delivery. 
+									It&apos;s not about the technology stack—it&apos;s about building products that users actually install, 
+									use, and find valuable in their daily lives.
 								</p>
 							</div>
 							<img src='/img/jonathan.jpeg' alt='' />
