@@ -49,7 +49,7 @@ export default function ContactForm() {
 			<div className='pb-8'>
 				<p className='text-4xl font-bold inline border-b-4 border-red-600 text-gray-300'>Contact</p>
 				<p className='text-[#8892b0] py-4'>
-					Submit the form below or send me an email - jonathans199@gmail.com
+					Submit the form below
 				</p>
 			</div>
 

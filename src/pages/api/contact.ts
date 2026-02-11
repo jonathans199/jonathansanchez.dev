@@ -32,7 +32,7 @@ export default async function handler(
         from: "Contact Form <contact@jonathansanchez.dev>",
         to: ["jonathans199@gmail.com"],
         reply_to: email,
-        subject: `New Contact Form Submission from ${name}`,
+        subject: `New Contact Form Submission from JonathanSanchez.dev`,
         html: `
 					<h2>New Contact Form Submission</h2>
 					<p><strong>Name:</strong> ${name}</p>
