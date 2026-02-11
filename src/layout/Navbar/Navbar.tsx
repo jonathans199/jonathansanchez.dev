@@ -153,7 +153,7 @@ export const Navbar = () => {
 							NPM <FaNpm size={30} />
 						</a>
 					</li>
-					<li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-slate-900'>
+					{/* <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-slate-900'>
 						<a
 							href='mailto:jonathans199@gmail.com'
 							className='flex justify-between items-center w-full text-gray-500'
@@ -161,7 +161,7 @@ export const Navbar = () => {
 							target='_blank'>
 							Email <HiOutlineMail size={30} />
 						</a>
-					</li>
+					</li> */}
 					{/* <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-slate-900'>
 						<a
 							href='/jonathan-sanchez-resume.pdf'
