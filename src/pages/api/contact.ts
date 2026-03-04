@@ -5,6 +5,15 @@ type Data = {
   error?: string;
 };
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>,
@@ -13,12 +22,52 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, email, message } = req.body;
+  const { name, email, message, website } = req.body;
+  const turnstileToken = req.body["cf-turnstile-response"];
+
+  // Honeypot check — bots fill hidden fields, real users don't
+  if (website) {
+    return res.status(200).json({ message: "Email sent successfully" });
+  }
 
   // Validate input
   if (!name || !email || !message) {
     return res.status(400).json({ error: "Missing required fields" });
   }
+
+  // Verify Turnstile token
+  if (!turnstileToken) {
+    return res.status(400).json({ error: "Please complete the CAPTCHA" });
+  }
+
+  try {
+    const turnstileRes = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          secret: process.env.CF_TURNSTILE_SECRET_KEY,
+          response: turnstileToken,
+        }),
+      },
+    );
+
+    const turnstileData = await turnstileRes.json();
+
+    if (!turnstileData.success) {
+      return res
+        .status(400)
+        .json({ error: "CAPTCHA verification failed. Please try again." });
+    }
+  } catch (error) {
+    console.error("Turnstile verification error:", error);
+    return res.status(500).json({ error: "CAPTCHA verification failed" });
+  }
+
+  const safeName = escapeHtml(name);
+  const safeEmail = escapeHtml(email);
+  const safeMessage = escapeHtml(message);
 
   try {
     // Using Resend for email sending
@@ -35,10 +84,10 @@ export default async function handler(
         subject: `New Contact Form Submission from JonathanSanchez.dev`,
         html: `
 					<h2>New Contact Form Submission</h2>
-					<p><strong>Name:</strong> ${name}</p>
-					<p><strong>Email:</strong> ${email}</p>
+					<p><strong>Name:</strong> ${safeName}</p>
+					<p><strong>Email:</strong> ${safeEmail}</p>
 					<p><strong>Message:</strong></p>
-					<p>${message.replace(/\n/g, "<br>")}</p>
+					<p>${safeMessage.replace(/\n/g, "<br>")}</p>
 				`,
       }),
     });
