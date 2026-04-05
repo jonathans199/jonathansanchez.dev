@@ -25,9 +25,9 @@ export default function Home() {
 				<section className='h-screen ' id='top'>
 					<div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
 						<p className='text-2xl text-red-600'>Hi 👋, my name is</p>
-						<h1 className='text-4xl  sm:text-7xl font-bold text-[#ccd6f6]'>Jonathan Sanchez</h1>
+						<h1 className='text-4xl  sm:text-7xl font-bold text-[var(--text-heading)]'>Jonathan Sanchez</h1>
 
-						<h2 className='text-2xl sm:text-5xl font-bold text-[#8892b0]'>
+						<h2 className='text-2xl sm:text-5xl font-bold text-[var(--text-secondary)]'>
 							<TypeAnimation
 								sequence={[
 									'Software Architect 🏯',
@@ -50,7 +50,7 @@ export default function Home() {
 								repeat={Infinity}
 							/>
 						</h2>
-						<p className='text-xl text-[#8892b0] py-4'>
+						<p className='text-xl text-[var(--text-secondary)] py-4'>
 						🚀 Software Engineer and Software Architect with 11 years of experience turning complex challenges into simple, impactful solutions. I&apos;ve helped companies grow by building products that delight users, scale with demand, and make a real difference in how people work and live. Passionate about blending creativity with problem-solving to deliver results that last. 💡 I&apos;m also a software architect who&apos;s skilled in designing and implementing scalable, maintainable, and high-performing software systems.
 						</p>
 						<Link href='/work'>
@@ -103,7 +103,7 @@ export default function Home() {
 
 				<section className='min-h-full bottom-margin-large' id='work'>
 					<div className='flex flex-col justify-center'>
-						<h2 className='text-4xl font-bold inline border-b-4 text-gray-300 border-red-600'>Work</h2>
+						<h2 className='text-4xl font-bold inline border-b-4 text-[var(--text-primary)] border-red-600'>Work</h2>
 						<p>checkout some of my work </p>
 					</div>
 					<section className='max-w-[1200px] mx-auto'>
@@ -125,7 +125,7 @@ export default function Home() {
 				<div className='scroll' id='contributions' />
 				<div>
 					<div className='flex flex-col justify-center'>
-						<h2 className='text-4xl font-bold inline border-b-4 text-gray-300 border-red-600'>Contributions</h2>
+						<h2 className='text-4xl font-bold inline border-b-4 text-[var(--text-primary)] border-red-600'>Contributions</h2>
 						<p>checkout some of my work </p>
 					</div>
 					<section className='max-w-[1200px] mx-auto'>

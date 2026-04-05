@@ -11,7 +11,7 @@ export const WorkItem = ({ item }: any) => {
         </div>
         <div className='lg:pr-10'>
           <h5 className='mb-4 text-4xl font-extrabold leading-none'>{item.title}</h5>
-          <p className='mb-6 text-gray-300'>{item.description}</p>
+          <p className='mb-6 text-[var(--text-secondary)]'>{item.description}</p>
           {item.tech && <p className='mb-6 text-sm text-white-400 text-xl'>{item.tech}</p>}
           
           {/* View Details Button */}
@@ -32,7 +32,7 @@ export const WorkItem = ({ item }: any) => {
               <Link
                 href={item.ios}
                 target={'_blank'}
-                className='text-gray-600 transition-colors duration-300 hover:text-red-100'>
+                className='text-[var(--text-muted)] transition-colors duration-300 hover:text-red-100'>
                 <FaApple size={30} />
               </Link>
             )}
@@ -41,7 +41,7 @@ export const WorkItem = ({ item }: any) => {
               <Link
                 href={item?.github}
                 target={'_blank'}
-                className='text-gray-600 transition-colors duration-300 hover:text-red-100'>
+                className='text-[var(--text-muted)] transition-colors duration-300 hover:text-red-100'>
                 <FaGithub size={30} />
               </Link>
             )}
@@ -50,13 +50,13 @@ export const WorkItem = ({ item }: any) => {
               <Link
                 href={item?.live}
                 target={'_blank'}
-                className='text-gray-600 transition-colors duration-300 hover:text-red-100'>
+                className='text-[var(--text-muted)] transition-colors duration-300 hover:text-red-100'>
                 <FaLink size={30} />
               </Link>
             )}
 
             {item.private && (
-              <Link href='#' className='text-gray-600 transition-colors duration-300 hover:text-red-400'>
+              <Link href='#' className='text-[var(--text-muted)] transition-colors duration-300 hover:text-red-400'>
                 Private Repo
               </Link>
             )}

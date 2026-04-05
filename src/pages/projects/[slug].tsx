@@ -42,7 +42,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         {/* Back Button */}
         <Link 
           href="/work" 
-          className="inline-flex items-center text-[#8892b0] hover:text-red-600 transition-colors duration-300 mb-8"
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-red-600 transition-colors duration-300 mb-8"
         >
           <FaArrowLeft className="mr-2" />
           Back to Work
@@ -51,7 +51,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Project Image */}
           <div className="order-2 lg:order-1">
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-gray-900">
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-[var(--bg-card)]">
               <Image
                 src={project.img}
                 alt={project.title}
@@ -70,27 +70,27 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                   {project.category}
                 </span>
               )}
-              <h1 className="text-4xl lg:text-5xl font-bold text-[#ccd6f6] mb-4">
+              <h1 className="text-4xl lg:text-5xl font-bold text-[var(--text-heading)] mb-4">
                 {project.title}
               </h1>
               {project.year && (
-                <p className="text-[#8892b0] text-lg mb-4">{project.year}</p>
+                <p className="text-[var(--text-secondary)] text-lg mb-4">{project.year}</p>
               )}
             </div>
 
-            <p className="text-[#8892b0] text-lg leading-relaxed">
+            <p className="text-[var(--text-secondary)] text-lg leading-relaxed">
               {project.fullDescription || project.description}
             </p>
 
             {/* Tech Stack */}
             {project.techStack && (
               <div>
-                <h3 className="text-xl font-semibold text-[#ccd6f6] mb-3">Tech Stack</h3>
+                <h3 className="text-xl font-semibold text-[var(--text-heading)] mb-3">Tech Stack</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-[#112240] text-red-400 rounded-md text-sm border border-red-600/20"
+                      className="px-3 py-1 bg-[var(--bg-card)] text-red-400 rounded-md text-sm border border-red-600/20"
                     >
                       {tech}
                     </span>
@@ -102,10 +102,10 @@ export default function ProjectPage({ project }: ProjectPageProps) {
             {/* Features */}
             {project.features && (
               <div>
-                <h3 className="text-xl font-semibold text-[#ccd6f6] mb-3">Key Features</h3>
+                <h3 className="text-xl font-semibold text-[var(--text-heading)] mb-3">Key Features</h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {project.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-[#8892b0]">
+                    <li key={index} className="flex items-center text-[var(--text-secondary)]">
                       <span className="w-2 h-2 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>
                       {feature}
                     </li>
@@ -121,7 +121,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                   href={project.ios}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-[#8892b0] hover:text-red-600 transition-colors duration-300"
+                  className="flex items-center space-x-2 text-[var(--text-secondary)] hover:text-red-600 transition-colors duration-300"
                 >
                   <FaApple size={24} />
                   <span>App Store</span>
@@ -133,7 +133,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-[#8892b0] hover:text-red-600 transition-colors duration-300"
+                  className="flex items-center space-x-2 text-[var(--text-secondary)] hover:text-red-600 transition-colors duration-300"
                 >
                   <FaGithub size={24} />
                   <span>GitHub</span>
@@ -145,7 +145,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-[#8892b0] hover:text-red-600 transition-colors duration-300"
+                  className="flex items-center space-x-2 text-[var(--text-secondary)] hover:text-red-600 transition-colors duration-300"
                 >
                   <FaLink size={24} />
                   <span>Live Demo</span>
@@ -153,7 +153,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
               )}
 
               {project.private && (
-                <span className="flex items-center space-x-2 text-[#8892b0]">
+                <span className="flex items-center space-x-2 text-[var(--text-secondary)]">
                   <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
                   <span>Private Repository</span>
                 </span>
@@ -163,19 +163,19 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         </div>
 
         {/* Additional Tech Info */}
-        <div className="mt-16 p-6 bg-[#112240] rounded-lg border border-red-600/20">
-          <h3 className="text-xl font-semibold text-[#ccd6f6] mb-3">Technologies Used</h3>
-          <p className="text-[#8892b0]">{project.tech}</p>
+        <div className="mt-16 p-6 bg-[var(--bg-card)] rounded-lg border border-red-600/20">
+          <h3 className="text-xl font-semibold text-[var(--text-heading)] mb-3">Technologies Used</h3>
+          <p className="text-[var(--text-secondary)]">{project.tech}</p>
         </div>
 
         {/* Screenshots Gallery */}
         {project.screenshots && project.screenshots.length > 0 && (
           <div className="mt-16">
-            <h3 className="text-2xl font-semibold text-[#ccd6f6] mb-8">Project Screenshots</h3>
+            <h3 className="text-2xl font-semibold text-[var(--text-heading)] mb-8">Project Screenshots</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {project.screenshots.map((screenshot, index) => (
                 <div key={index} className="relative group">
-                  <div className="relative rounded-lg overflow-hidden shadow-xl bg-gray-900">
+                  <div className="relative rounded-lg overflow-hidden shadow-xl bg-[var(--bg-card)]">
                     <Image
                       src={screenshot}
                       alt={`${project.title} screenshot ${index + 1}`}

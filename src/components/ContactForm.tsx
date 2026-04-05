@@ -101,8 +101,8 @@ export default function ContactForm() {
 	return (
 		<form onSubmit={handleSubmit} className='flex flex-col max-w-[600px] w-full'>
 			<div className='pb-8'>
-				<p className='text-4xl font-bold inline border-b-4 border-red-600 text-gray-300'>Contact</p>
-				<p className='text-[#8892b0] py-4'>
+				<p className='text-4xl font-bold inline border-b-4 border-red-600 text-[var(--text-primary)]'>Contact</p>
+				<p className='text-[var(--text-secondary)] py-4'>
 					Submit the form below
 				</p>
 			</div>
@@ -120,7 +120,7 @@ export default function ContactForm() {
 			)}
 
 			<input
-				className='p-2 bg-[#ccd6f6] text-gray-900'
+				className='p-2 bg-[var(--bg-card)] text-gray-900'
 				type='text'
 				placeholder='Name'
 				name='name'
@@ -129,7 +129,7 @@ export default function ContactForm() {
 				required
 			/>
 			<input
-				className='my-4 p-2 bg-[#ccd6f6] text-gray-900'
+				className='my-4 p-2 bg-[var(--bg-card)] text-gray-900'
 				type='email'
 				placeholder='Email'
 				name='email'
@@ -138,7 +138,7 @@ export default function ContactForm() {
 				required
 			/>
 			<textarea
-				className='p-2 bg-[#ccd6f6] text-gray-900'
+				className='p-2 bg-[var(--bg-card)] text-gray-900'
 				name='message'
 				placeholder='Message'
 				rows={10}

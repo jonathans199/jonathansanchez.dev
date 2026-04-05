@@ -24,7 +24,7 @@ const Skills = () => {
                 }}
               />
             </div>
-            <p className='text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300'>
+            <p className='text-sm font-medium text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors duration-300'>
               {logo.name}
             </p>
           </div>

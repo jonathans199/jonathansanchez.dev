@@ -15,11 +15,11 @@ export default function PrivacyPolicy() {
       </Head>
       <div className="max-w-[1200px] mx-auto px-4 py-20">
         <div className="max-w-[900px] mx-auto">
-          <h1 className="text-4xl font-bold text-[#ccd6f6] mb-8 border-b-4 border-red-600 inline-block pb-2">
+          <h1 className="text-4xl font-bold text-[var(--text-heading)] mb-8 border-b-4 border-red-600 inline-block pb-2">
             Privacy Policy
           </h1>
 
-          <div className="text-[#8892b0] space-y-6 text-lg leading-relaxed">
+          <div className="text-[var(--text-secondary)] space-y-6 text-lg leading-relaxed">
             <p>
               When you use our services, or install any App you&apos;re trusting us
               with your information. We understand this is a big responsibility
@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
             </p>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#ccd6f6] mb-4">
+              <h2 className="text-2xl font-bold text-[var(--text-heading)] mb-4">
                 Information Collection & Use
               </h2>
               <p>
@@ -57,7 +57,7 @@ export default function PrivacyPolicy() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#ccd6f6] mb-4">
+              <h2 className="text-2xl font-bold text-[var(--text-heading)] mb-4">
                 Log Data
               </h2>
               <p>
@@ -76,7 +76,7 @@ export default function PrivacyPolicy() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#ccd6f6] mb-4">
+              <h2 className="text-2xl font-bold text-[var(--text-heading)] mb-4">
                 IAP Service Conditions
               </h2>
               <ul className="space-y-2">
@@ -119,7 +119,7 @@ export default function PrivacyPolicy() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#ccd6f6] mb-4">
+              <h2 className="text-2xl font-bold text-[var(--text-heading)] mb-4">
                 Changes To This Privacy Policy
               </h2>
               <p>
