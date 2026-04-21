@@ -42,7 +42,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         {/* Back Button */}
         <Link 
           href="/work" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-red-600 transition-colors duration-300 mb-8"
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors duration-300 mb-8"
         >
           <FaArrowLeft className="mr-2" />
           Back to Work
@@ -66,7 +66,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           <div className="order-1 lg:order-2 space-y-6">
             <div>
               {project.category && (
-                <span className="inline-block px-3 py-1 text-sm bg-red-600 text-white rounded-full mb-4">
+                <span className="inline-block px-3 py-1 text-sm bg-brand-600 text-white rounded-full mb-4">
                   {project.category}
                 </span>
               )}
@@ -90,7 +90,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                   {project.techStack.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-[var(--bg-card)] text-red-400 rounded-md text-sm border border-red-600/20"
+                      className="px-3 py-1 bg-[var(--bg-card)] text-[var(--accent)] rounded-md text-sm border border-brand-500/20"
                     >
                       {tech}
                     </span>
@@ -106,7 +106,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {project.features.map((feature, index) => (
                     <li key={index} className="flex items-center text-[var(--text-secondary)]">
-                      <span className="w-2 h-2 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>
+                      <span className="w-2 h-2 bg-brand-600 rounded-full mr-3 flex-shrink-0"></span>
                       {feature}
                     </li>
                   ))}
@@ -121,7 +121,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                   href={project.ios}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-[var(--text-secondary)] hover:text-red-600 transition-colors duration-300"
+                  className="flex items-center space-x-2 text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors duration-300"
                 >
                   <FaApple size={24} />
                   <span>App Store</span>
@@ -133,7 +133,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-[var(--text-secondary)] hover:text-red-600 transition-colors duration-300"
+                  className="flex items-center space-x-2 text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors duration-300"
                 >
                   <FaGithub size={24} />
                   <span>GitHub</span>
@@ -145,7 +145,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-[var(--text-secondary)] hover:text-red-600 transition-colors duration-300"
+                  className="flex items-center space-x-2 text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors duration-300"
                 >
                   <FaLink size={24} />
                   <span>Live Demo</span>
@@ -163,7 +163,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         </div>
 
         {/* Additional Tech Info */}
-        <div className="mt-16 p-6 bg-[var(--bg-card)] rounded-lg border border-red-600/20">
+        <div className="mt-16 p-6 bg-[var(--bg-card)] rounded-lg border border-brand-500/20">
           <h3 className="text-xl font-semibold text-[var(--text-heading)] mb-3">Technologies Used</h3>
           <p className="text-[var(--text-secondary)]">{project.tech}</p>
         </div>

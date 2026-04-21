@@ -13,7 +13,7 @@ const BlogCard = ({ item }: any) => {
 
 	return (
 		<Link href={`/blog/${item.slug}`} className='block group'>
-			<div className='flex flex-col sm:flex-row rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-red-600 transition-all duration-300 hover:shadow-lg hover:shadow-red-600/10 overflow-hidden'>
+			<div className='flex flex-col sm:flex-row rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[var(--accent)] transition-all duration-300 hover:shadow-lg hover:shadow-brand-500/20 overflow-hidden'>
 				{thumbnail && (
 					<div className='sm:w-56 sm:min-w-[14rem] h-44 sm:h-auto shrink-0'>
 						<img
@@ -31,7 +31,7 @@ const BlogCard = ({ item }: any) => {
 							</span>
 						))}
 					</div>
-					<h3 className='text-xl font-bold mb-2 text-[var(--text-primary)] group-hover:text-red-500 transition-colors duration-300'>
+					<h3 className='text-xl font-bold mb-2 text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors duration-300'>
 						{item.title}
 					</h3>
 					<p className='text-[var(--text-secondary)] mb-4 text-sm leading-relaxed line-clamp-2'>{item.description}</p>
@@ -67,7 +67,7 @@ const Blog = () => {
 			<section className='max-w-[900px] mx-auto pt-40 px-4'>
 				<section className='min-h-screen'>
 					<div className='mb-12'>
-						<h2 className='text-4xl sm:text-6xl font-bold inline border-b-4 mb-4 border-red-600 text-[var(--text-primary)]'>Blog</h2>
+						<h2 className='text-4xl sm:text-6xl font-bold inline border-b-4 mb-4 border-[var(--accent)] text-[var(--text-primary)]'>Blog</h2>
 						<p className='text-[var(--text-secondary)] mt-6 max-w-2xl'>
 							Technical articles and tutorials on web development, cloud infrastructure, and software engineering.
 						</p>

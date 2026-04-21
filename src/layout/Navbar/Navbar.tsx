@@ -24,7 +24,7 @@ export const Navbar = () => {
 	}, [])
 
 	const desktopLinkClass =
-		'text-sm text-[var(--text-muted)] hover:text-red-500 transition-colors duration-300 font-medium tracking-wide'
+		'text-sm text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors duration-300 font-medium tracking-wide'
 
 	return (
 		<div className='fixed w-full flex justify-between items-center px-6 py-3 bg-[var(--bg-nav)] backdrop-blur-sm text-[var(--text-primary)] z-50 border-b border-[var(--border-color)] transition-colors duration-300'>
@@ -68,31 +68,31 @@ export const Navbar = () => {
 							<Link
 								href='/work'
 								onClick={() => setMoreOpen(false)}
-								className='block px-4 py-2 text-sm text-[var(--text-muted)] hover:text-red-500 hover:bg-[var(--bg-card-hover)] transition-colors duration-200'>
+								className='block px-4 py-2 text-sm text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--bg-card-hover)] transition-colors duration-200'>
 								Work
 							</Link>
 							<Link
 								href='/tutorials'
 								onClick={() => setMoreOpen(false)}
-								className='block px-4 py-2 text-sm text-[var(--text-muted)] hover:text-red-500 hover:bg-[var(--bg-card-hover)] transition-colors duration-200'>
+								className='block px-4 py-2 text-sm text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--bg-card-hover)] transition-colors duration-200'>
 								Tutorials
 							</Link>
 							<Link
 								href='/packages'
 								onClick={() => setMoreOpen(false)}
-								className='block px-4 py-2 text-sm text-[var(--text-muted)] hover:text-red-500 hover:bg-[var(--bg-card-hover)] transition-colors duration-200'>
+								className='block px-4 py-2 text-sm text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--bg-card-hover)] transition-colors duration-200'>
 								Packages
 							</Link>
 							<Link
 								href='/contributions'
 								onClick={() => setMoreOpen(false)}
-								className='block px-4 py-2 text-sm text-[var(--text-muted)] hover:text-red-500 hover:bg-[var(--bg-card-hover)] transition-colors duration-200'>
+								className='block px-4 py-2 text-sm text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--bg-card-hover)] transition-colors duration-200'>
 								Contributions
 							</Link>
 							<Link
 								href='/talks'
 								onClick={() => setMoreOpen(false)}
-								className='block px-4 py-2 text-sm text-[var(--text-muted)] hover:text-red-500 hover:bg-[var(--bg-card-hover)] transition-colors duration-200'>
+								className='block px-4 py-2 text-sm text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--bg-card-hover)] transition-colors duration-200'>
 								Presentations
 							</Link>
 						</div>
@@ -107,25 +107,25 @@ export const Navbar = () => {
 			{/* Desktop Right: Social Icons + Theme Toggle */}
 			<div className='hidden lg:flex items-center gap-3'>
 				<a href='https://www.linkedin.com/in/jonathansanchez199/' target='_blank' rel='noreferrer'
-					className='text-[var(--text-muted)] hover:text-red-500 transition-colors duration-300'>
+					className='text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors duration-300'>
 					<FaLinkedin size={18} />
 				</a>
 				<a href='https://github.com/jonathans199' target='_blank' rel='noreferrer'
-					className='text-[var(--text-muted)] hover:text-red-500 transition-colors duration-300'>
+					className='text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors duration-300'>
 					<FaGithub size={18} />
 				</a>
 				<a href='https://www.youtube.com/@jonsthewebguy' target='_blank' rel='noreferrer'
-					className='text-[var(--text-muted)] hover:text-red-500 transition-colors duration-300'>
+					className='text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors duration-300'>
 					<FaYoutube size={18} />
 				</a>
 				<a href='https://medium.com/@jonathans199' target='_blank' rel='noreferrer'
-					className='text-[var(--text-muted)] hover:text-red-500 transition-colors duration-300'>
+					className='text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors duration-300'>
 					<FaMedium size={18} />
 				</a>
 				<div className='w-px h-4 bg-[var(--border-color)] mx-1' />
 				<button
 					onClick={toggleTheme}
-					className='text-[var(--text-muted)] hover:text-red-500 transition-colors duration-300 cursor-pointer p-1'
+					className='text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors duration-300 cursor-pointer p-1'
 					aria-label='Toggle theme'>
 					{theme === 'dark' ? <FaSun size={16} /> : <FaMoon size={16} />}
 				</button>
@@ -135,15 +135,15 @@ export const Navbar = () => {
 			<div className='lg:hidden flex items-center gap-4 z-10'>
 				<button
 					onClick={toggleTheme}
-					className='text-[var(--text-muted)] hover:text-red-500 transition-colors duration-300 cursor-pointer'
+					className='text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors duration-300 cursor-pointer'
 					aria-label='Toggle theme'>
 					{theme === 'dark' ? <FaSun size={18} /> : <FaMoon size={18} />}
 				</button>
 				<div onClick={handleMenuToggle} className='cursor-pointer'>
 					{!nav ? (
-						<FaBars size={22} className='text-[var(--text-muted)] hover:text-red-600 hover:scale-110 duration-500' />
+						<FaBars size={22} className='text-[var(--text-muted)] hover:text-[var(--accent)] hover:scale-110 duration-500' />
 					) : (
-						<FaTimes size={20} className='text-[var(--text-primary)] hover:text-red-600 duration-300' />
+						<FaTimes size={20} className='text-[var(--text-primary)] hover:text-[var(--accent)] duration-300' />
 					)}
 				</div>
 			</div>
@@ -156,37 +156,37 @@ export const Navbar = () => {
 						: 'lg:hidden absolute top-0 left-0 w-full h-screen bg-[var(--bg-primary)] flex flex-col items-center pt-24'
 				}>
 				<ul>
-					<li className='py-4 text-3xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+					<li className='py-4 text-3xl hover:text-[var(--accent)] hover:ml-[-10px] duration-300'>
 						<Link href='/' onClick={() => setNav(false)}>HOME</Link>
 					</li>
-					<li className='py-4 text-3xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+					<li className='py-4 text-3xl hover:text-[var(--accent)] hover:ml-[-10px] duration-300'>
 						<Link href='/#about' onClick={() => setNav(false)}>ABOUT</Link>
 					</li>
-					<li className='py-4 text-3xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+					<li className='py-4 text-3xl hover:text-[var(--accent)] hover:ml-[-10px] duration-300'>
 						<Link href='/#skills' onClick={() => setNav(false)}>SKILLS</Link>
 					</li>
-					<li className='py-4 text-3xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+					<li className='py-4 text-3xl hover:text-[var(--accent)] hover:ml-[-10px] duration-300'>
 						<Link href='/work' onClick={() => setNav(false)}>WORK</Link>
 					</li>
-					<li className='py-4 text-3xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+					<li className='py-4 text-3xl hover:text-[var(--accent)] hover:ml-[-10px] duration-300'>
 						<Link href='/projects' onClick={() => setNav(false)}>PROJECTS</Link>
 					</li>
-					<li className='py-4 text-3xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+					<li className='py-4 text-3xl hover:text-[var(--accent)] hover:ml-[-10px] duration-300'>
 						<Link href='/blog' onClick={() => setNav(false)}>BLOG</Link>
 					</li>
-					<li className='py-4 text-3xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+					<li className='py-4 text-3xl hover:text-[var(--accent)] hover:ml-[-10px] duration-300'>
 						<Link href='/tutorials' onClick={() => setNav(false)}>TUTORIALS</Link>
 					</li>
-					<li className='py-4 text-3xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+					<li className='py-4 text-3xl hover:text-[var(--accent)] hover:ml-[-10px] duration-300'>
 						<Link href='/packages' onClick={() => setNav(false)}>PACKAGES</Link>
 					</li>
-					<li className='py-4 text-3xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+					<li className='py-4 text-3xl hover:text-[var(--accent)] hover:ml-[-10px] duration-300'>
 						<Link href='/contributions' onClick={() => setNav(false)}>CONTRIBUTIONS</Link>
 					</li>
-					<li className='py-4 text-3xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+					<li className='py-4 text-3xl hover:text-[var(--accent)] hover:ml-[-10px] duration-300'>
 						<Link href='/talks' onClick={() => setNav(false)}>PRESENTATIONS</Link>
 					</li>
-					<li className='py-4 text-3xl hover:text-red-600 hover:ml-[-10px] duration-300'>
+					<li className='py-4 text-3xl hover:text-[var(--accent)] hover:ml-[-10px] duration-300'>
 						<Link href='/#contact' onClick={() => setNav(false)}>CONTACT</Link>
 					</li>
 				</ul>
@@ -194,19 +194,19 @@ export const Navbar = () => {
 				{/* Mobile Social Icons */}
 				<div className='flex gap-6 mt-8'>
 					<a href='https://www.linkedin.com/in/jonathansanchez199/' target='_blank' rel='noreferrer'
-						className='text-[var(--text-muted)] hover:text-red-500'>
+						className='text-[var(--text-muted)] hover:text-[var(--accent)]'>
 						<FaLinkedin size={24} />
 					</a>
 					<a href='https://github.com/jonathans199' target='_blank' rel='noreferrer'
-						className='text-[var(--text-muted)] hover:text-red-500'>
+						className='text-[var(--text-muted)] hover:text-[var(--accent)]'>
 						<FaGithub size={24} />
 					</a>
 					<a href='https://www.youtube.com/@jonsthewebguy' target='_blank' rel='noreferrer'
-						className='text-[var(--text-muted)] hover:text-red-500'>
+						className='text-[var(--text-muted)] hover:text-[var(--accent)]'>
 						<FaYoutube size={24} />
 					</a>
 					<a href='https://medium.com/@jonathans199' target='_blank' rel='noreferrer'
-						className='text-[var(--text-muted)] hover:text-red-500'>
+						className='text-[var(--text-muted)] hover:text-[var(--accent)]'>
 						<FaMedium size={24} />
 					</a>
 				</div>

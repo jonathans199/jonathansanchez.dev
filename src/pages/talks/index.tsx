@@ -12,7 +12,7 @@ const Talks = () => {
       <section className='max-w-[1200px] mx-auto pt-40 px-4'>
         <section className='min-h-screen'>
           <div className='flex flex-col justify-center'>
-            <h2 className='text-6xl font-bold inline border-b-4 mb-4 border-red-600'>Presentations</h2>
+            <h2 className='text-6xl font-bold inline border-b-4 mb-4 border-[var(--accent)]'>Presentations</h2>
           </div>
           <div className='flex flex-col items-center my-8'>
             <div className='presentations max-w-full'>

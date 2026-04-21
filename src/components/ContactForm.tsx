@@ -101,7 +101,7 @@ export default function ContactForm() {
 	return (
 		<form onSubmit={handleSubmit} className='flex flex-col max-w-[600px] w-full'>
 			<div className='pb-8'>
-				<p className='text-4xl font-bold inline border-b-4 border-red-600 text-[var(--text-primary)]'>Contact</p>
+				<p className='text-4xl font-bold inline border-b-4 border-[var(--accent)] text-[var(--text-primary)]'>Contact</p>
 				<p className='text-[var(--text-secondary)] py-4'>
 					Submit the form below
 				</p>
@@ -120,7 +120,7 @@ export default function ContactForm() {
 			)}
 
 			<input
-				className='p-2 bg-[var(--bg-card)] text-gray-900'
+				className='p-2 bg-[var(--bg-card)] text-[var(--text-primary)] border border-[var(--border-color)] rounded-md focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] transition-colors'
 				type='text'
 				placeholder='Name'
 				name='name'
@@ -129,7 +129,7 @@ export default function ContactForm() {
 				required
 			/>
 			<input
-				className='my-4 p-2 bg-[var(--bg-card)] text-gray-900'
+				className='my-4 p-2 bg-[var(--bg-card)] text-[var(--text-primary)] border border-[var(--border-color)] rounded-md focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] transition-colors'
 				type='email'
 				placeholder='Email'
 				name='email'
@@ -138,7 +138,7 @@ export default function ContactForm() {
 				required
 			/>
 			<textarea
-				className='p-2 bg-[var(--bg-card)] text-gray-900'
+				className='p-2 bg-[var(--bg-card)] text-[var(--text-primary)] border border-[var(--border-color)] rounded-md focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] transition-colors'
 				name='message'
 				placeholder='Message'
 				rows={10}
@@ -164,7 +164,7 @@ export default function ContactForm() {
 			<button
 				type='submit'
 				disabled={isSubmitDisabled}
-				className='text-white border-2 hover:bg-red-600 hover:border-red-600 px-4 py-3 my-4 mx-auto flex items-center disabled:opacity-50 disabled:cursor-not-allowed'>
+				className='text-white border-2 bg-brand-600 border-brand-600 hover:bg-brand-700 hover:border-brand-700 px-4 py-3 my-4 mx-auto flex items-center rounded-md transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed'>
 				{status === 'loading' ? 'Sending...' : "Let's Collaborate"}
 			</button>
 		</form>

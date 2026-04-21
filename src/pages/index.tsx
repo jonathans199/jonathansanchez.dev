@@ -22,9 +22,9 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<div className='max-w-[1200px] mx-auto px-4 h-full'>
-				<section className='h-screen ' id='top'>
-					<div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-						<p className='text-2xl text-red-600'>Hi 👋, my name is</p>
+				<section className='min-h-screen flex items-center pt-24 pb-12' id='top'>
+					<div className='max-w-[1000px] mx-auto px-8 w-full'>
+						<p className='text-2xl text-[var(--accent)]'>Hi, I'm</p>
 						<h1 className='text-4xl  sm:text-7xl font-bold text-[var(--text-heading)]'>Jonathan Sanchez</h1>
 
 						<h2 className='text-2xl sm:text-5xl font-bold text-[var(--text-secondary)]'>
@@ -34,11 +34,13 @@ export default function Home() {
 									2000,
 									'Hands-on CTO 🚀',
 									2000,
-									'Mobile Software Engineer 📱',
+									'Full-Stack Engineer 💻',
 									2000,
-									'Full-Stack Software Engineer 👨‍💻',
+									'AI & Cloud Builder ☁️',
 									2000,
-									'Experienced Ecommerce and PIM Professional 🛍️',
+									'E-commerce & PIM Expert 🛍️',
+									2000,
+									'Mobile Developer 📲',
 									2000,
 									'Volleyball Player 🏐',
 									2000,
@@ -51,10 +53,10 @@ export default function Home() {
 							/>
 						</h2>
 						<p className='text-xl text-[var(--text-secondary)] py-4'>
-						🚀 Software Engineer and Software Architect with 11 years of experience turning complex challenges into simple, impactful solutions. I&apos;ve helped companies grow by building products that delight users, scale with demand, and make a real difference in how people work and live. Passionate about blending creativity with problem-solving to deliver results that last. 💡 I&apos;m also a software architect who&apos;s skilled in designing and implementing scalable, maintainable, and high-performing software systems.
+							I don&apos;t just write code — I architect experiences. 12+ years of transforming bold ideas into scalable, high-impact products that users love and businesses rely on.
 						</p>
 						<Link href='/work'>
-							<button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
+							<button className='primary-accent-bg text-white border-2 px-6 py-3 my-2 flex items-center'>
 								view work
 								<span className='hover:rotate-90 duration-300'>
 									<HiArrowNarrowRight className='ml-4' />
@@ -65,35 +67,23 @@ export default function Home() {
 				</section>
 
 				<div className='scroll' id='about' />
-				<section className='h-screen min'>
+				<section className='min-h-screen py-20'>
 					<div className='flex flex-col justify-center items-center'>
 						<div className='max-w-[1000px] w-full px-4 grid grid-cols-2 gap-8'>
 							<div className='sm:text-right pb-8'>
-								<p className='text-4xl font-bold inline border-b-4 border-red-600'>About</p>
+								<p className='text-4xl font-bold inline border-b-4 border-[var(--accent)]'>About</p>
 							</div>
 						</div>
-						<div className='max-w-[1200px] text-right w-full grid sm:grid-cols-2 gap-8 px-4'>
+						<div className='max-w-[900px] text-right w-full grid sm:grid-cols-2 gap-8 px-4'>
 							<div>
 								<p className='text-3xl font-bold mb-4'>
 									<q>Launch Early, Iterate Fast</q>
 								</p>
 								<p>
-									As a hands-on CTO and software architect, I specialize in building scalable systems and leading 
-									high-performing engineering teams. With AWS certifications and a proven track record of delivering 
-									production-grade applications, I architect solutions that balance technical excellence with rapid 
-									market validation. <br />
-									<br />
-									I believe in launching early prototypes and iterating based on real user feedback rather than 
-									pursuing perfection in isolation. My experience spans AI/ML implementations using LangChain, 
-									RAG systems, and modern LLM integrations, combined with robust cloud infrastructure and 
-									team leadership that drives tangible business outcomes.
+									I lead engineering teams and architect systems built to ship fast and scale faster. From AI-powered products with LangChain and RAG to cloud-native platforms on AWS and GCP, I bring ideas to market with speed and precision — then iterate until they stick.
 									<br />
 									<br />
-									<b>Specialties:</b>  Systems Architecture, Team Leadership, AI/ML (LangChain, RAG), AWS & GCP Cloud Solutions, 
-									PIM & E-commerce Systems (Akeneo, Shopify), TypeScript, React, React Native, Ruby on Rails, 
-									Node.js, Next.js, SQL & NoSQL Databases, Mobile App Development, and Production Delivery. 
-									It&apos;s not about the technology stack—it&apos;s about building products that users actually install, 
-									use, and find valuable in their daily lives.
+									<b>Specialties:</b> Systems Architecture, Team Leadership, AI/ML, Cloud Solutions, PIM &amp; E-commerce, TypeScript, React, React Native, Ruby on Rails, Node.js, Next.js, and Mobile Development.
 								</p>
 							</div>
 							<img src='/img/jonathan.jpeg' alt='' />
@@ -103,7 +93,7 @@ export default function Home() {
 
 				<section className='min-h-full bottom-margin-large' id='work'>
 					<div className='flex flex-col justify-center'>
-						<h2 className='text-4xl font-bold inline border-b-4 text-[var(--text-primary)] border-red-600'>Work</h2>
+						<h2 className='text-4xl font-bold inline border-b-4 text-[var(--text-primary)] border-[var(--accent)]'>Work</h2>
 						<p>checkout some of my work </p>
 					</div>
 					<section className='max-w-[1200px] mx-auto'>
@@ -112,7 +102,7 @@ export default function Home() {
 						))}
 					</section>
 					<Link href='/work'>
-						<button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
+						<button className='primary-accent-bg text-white border-2 px-6 py-3 my-2 flex items-center'>
 							View More work
 							<span className='hover:rotate-90 duration-300'>
 								<HiArrowNarrowRight className='ml-4' />
@@ -125,7 +115,7 @@ export default function Home() {
 				<div className='scroll' id='contributions' />
 				<div>
 					<div className='flex flex-col justify-center'>
-						<h2 className='text-4xl font-bold inline border-b-4 text-[var(--text-primary)] border-red-600'>Contributions</h2>
+						<h2 className='text-4xl font-bold inline border-b-4 text-[var(--text-primary)] border-[var(--accent)]'>Contributions</h2>
 						<p>checkout some of my work </p>
 					</div>
 					<section className='max-w-[1200px] mx-auto'>
@@ -134,7 +124,7 @@ export default function Home() {
 						))}
 					</section>
 					{/* <Link href='/work'>
-						<button className='primary-rd-bg text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600'>
+						<button className='primary-accent-bg text-white border-2 px-6 py-3 my-2 flex items-center'>
 							View More work
 							<span className='hover:rotate-90 duration-300'>
 								<HiArrowNarrowRight className='ml-4' />

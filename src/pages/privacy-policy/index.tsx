@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
       </Head>
       <div className="max-w-[1200px] mx-auto px-4 py-20">
         <div className="max-w-[900px] mx-auto">
-          <h1 className="text-4xl font-bold text-[var(--text-heading)] mb-8 border-b-4 border-red-600 inline-block pb-2">
+          <h1 className="text-4xl font-bold text-[var(--text-heading)] mb-8 border-b-4 border-[var(--accent)] inline-block pb-2">
             Privacy Policy
           </h1>
 

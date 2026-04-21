@@ -4,7 +4,7 @@ const Skills = () => {
   return (
     <section className='bottom-margin-large'>
       <div className='flex flex-col justify-center'>
-        <h2 className='text-4xl font-bold inline border-b-4 mb-4 border-red-600'>Technologies</h2>
+        <h2 className='text-4xl font-bold inline border-b-4 mb-4 border-[var(--accent)]'>Technologies</h2>
       </div>
       <div className='grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 sm:gap-8 text-center my-8'>
         {logos.map((logo, index) => (

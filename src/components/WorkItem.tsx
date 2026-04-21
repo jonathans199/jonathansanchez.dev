@@ -19,7 +19,7 @@ export const WorkItem = ({ item }: any) => {
             <div className='mb-6'>
               <Link
                 href={`/projects/${item.slug}`}
-                className='inline-flex items-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors duration-300 font-medium'>
+                className='inline-flex items-center px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors duration-300 font-medium'>
                 <FaEye className='mr-2' />
                 View Details
               </Link>
@@ -32,7 +32,7 @@ export const WorkItem = ({ item }: any) => {
               <Link
                 href={item.ios}
                 target={'_blank'}
-                className='text-[var(--text-muted)] transition-colors duration-300 hover:text-red-100'>
+                className='text-[var(--text-muted)] transition-colors duration-300 hover:text-[var(--accent)]'>
                 <FaApple size={30} />
               </Link>
             )}
@@ -41,7 +41,7 @@ export const WorkItem = ({ item }: any) => {
               <Link
                 href={item?.github}
                 target={'_blank'}
-                className='text-[var(--text-muted)] transition-colors duration-300 hover:text-red-100'>
+                className='text-[var(--text-muted)] transition-colors duration-300 hover:text-[var(--accent)]'>
                 <FaGithub size={30} />
               </Link>
             )}
@@ -50,13 +50,13 @@ export const WorkItem = ({ item }: any) => {
               <Link
                 href={item?.live}
                 target={'_blank'}
-                className='text-[var(--text-muted)] transition-colors duration-300 hover:text-red-100'>
+                className='text-[var(--text-muted)] transition-colors duration-300 hover:text-[var(--accent)]'>
                 <FaLink size={30} />
               </Link>
             )}
 
             {item.private && (
-              <Link href='#' className='text-[var(--text-muted)] transition-colors duration-300 hover:text-red-400'>
+              <Link href='#' className='text-[var(--text-muted)] transition-colors duration-300 hover:text-[var(--accent-hover)]'>
                 Private Repo
               </Link>
             )}

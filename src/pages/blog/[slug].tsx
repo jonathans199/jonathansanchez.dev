@@ -37,7 +37,7 @@ const BlogPost = ({ post }: PostProps) => {
 			<section className='max-w-[800px] mx-auto pt-40 px-4 pb-20'>
 				<Link
 					href='/blog'
-					className='inline-flex items-center gap-2 text-[var(--text-muted)] hover:text-red-500 transition-colors duration-300 mb-8'>
+					className='inline-flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors duration-300 mb-8'>
 					<FaArrowLeft size={12} /> Back to Blog
 				</Link>
 
@@ -61,14 +61,14 @@ const BlogPost = ({ post }: PostProps) => {
 									href={post.mediumUrl}
 									target='_blank'
 									rel='noreferrer'
-									className='flex items-center gap-1 hover:text-red-500 transition-colors duration-300'>
+									className='flex items-center gap-1 hover:text-[var(--accent)] transition-colors duration-300'>
 									<FaMedium size={14} /> Read on Medium
 								</a>
 							)}
 						</div>
 					</header>
 
-					<div className='prose dark:prose-invert prose-red max-w-none prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:leading-relaxed prose-code:text-[var(--code-text)] prose-code:bg-[var(--code-bg)] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-transparent prose-pre:border-0 prose-pre:p-0 prose-a:text-red-500 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-red-600'>
+					<div className='prose dark:prose-invert max-w-none prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:leading-relaxed prose-code:text-[var(--code-text)] prose-code:bg-[var(--code-bg)] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-transparent prose-pre:border-0 prose-pre:p-0 prose-a:text-[var(--accent)] prose-a:no-underline hover:prose-a:underline prose-blockquote:border-[var(--accent)]'>
 						<ReactMarkdown
 							components={{
 								code({ className, children, ...props }: any) {
@@ -103,7 +103,7 @@ const BlogPost = ({ post }: PostProps) => {
 				<div className='mt-16 pt-8 border-t border-[var(--border-color)]'>
 					<Link
 						href='/blog'
-						className='inline-flex items-center gap-2 text-[var(--text-muted)] hover:text-red-500 transition-colors duration-300'>
+						className='inline-flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors duration-300'>
 						<FaArrowLeft size={12} /> Back to Blog
 					</Link>
 				</div>
