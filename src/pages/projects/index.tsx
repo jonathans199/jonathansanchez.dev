@@ -1,10 +1,32 @@
+import { useMemo, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FaGithub, FaLink, FaApple } from 'react-icons/fa'
 import { projects } from '../../../data/projects'
 
+const ALL = 'All'
+
+const normalizeCategory = (category?: string) => {
+  if (!category) return 'Other'
+  if (category === 'IOS Mobile App') return 'Mobile App'
+  return category
+}
+
 const Projects = () => {
+  const [active, setActive] = useState<string>(ALL)
+
+  const categories = useMemo(() => {
+    const set = new Set<string>()
+    projects.forEach(p => set.add(normalizeCategory(p.category)))
+    return [ALL, ...Array.from(set).sort()]
+  }, [])
+
+  const filtered = useMemo(() => {
+    if (active === ALL) return projects
+    return projects.filter(p => normalizeCategory(p.category) === active)
+  }, [active])
+
   return (
     <>
       <Head>
@@ -23,10 +45,31 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* Filter/Category buttons could go here in the future */}
-          
+          <div className='flex flex-wrap gap-2 mb-10'>
+            {categories.map(cat => {
+              const isActive = cat === active
+              return (
+                <button
+                  key={cat}
+                  type='button'
+                  onClick={() => setActive(cat)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium border transition-colors duration-200 ${
+                    isActive
+                      ? 'bg-[var(--accent)] border-[var(--accent)] text-white'
+                      : 'bg-transparent border-[var(--bg-card-hover)] text-[var(--text-secondary)] hover:bg-[var(--accent-soft)] hover:border-[var(--accent)] hover:text-[var(--accent)]'
+                  }`}>
+                  {cat}
+                </button>
+              )
+            })}
+          </div>
+
+          {filtered.length === 0 && (
+            <p className='text-[var(--text-muted)] py-16 text-center'>No projects in this category yet.</p>
+          )}
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {projects.map((project) => {
+            {filtered.map((project) => {
               const card = (
                 <div className='bg-[var(--bg-card)] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-brand-500/20 h-full cursor-pointer'>
                   {/* Project Image */}

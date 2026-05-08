@@ -90,10 +90,10 @@ export const Navbar = () => {
 								Contributions
 							</Link>
 							<Link
-								href='/talks'
+								href='/community'
 								onClick={() => setMoreOpen(false)}
 								className='block px-4 py-2 text-sm text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--bg-card-hover)] transition-colors duration-200'>
-								Presentations
+								Community
 							</Link>
 						</div>
 					)}
@@ -184,7 +184,7 @@ export const Navbar = () => {
 						<Link href='/contributions' onClick={() => setNav(false)}>CONTRIBUTIONS</Link>
 					</li>
 					<li className='py-4 text-3xl hover:text-[var(--accent)] hover:ml-[-10px] duration-300'>
-						<Link href='/talks' onClick={() => setNav(false)}>PRESENTATIONS</Link>
+						<Link href='/community' onClick={() => setNav(false)}>COMMUNITY</Link>
 					</li>
 					<li className='py-4 text-3xl hover:text-[var(--accent)] hover:ml-[-10px] duration-300'>
 						<Link href='/#contact' onClick={() => setNav(false)}>CONTACT</Link>

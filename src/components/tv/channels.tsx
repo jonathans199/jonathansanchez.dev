@@ -326,24 +326,21 @@ const ContributionsChannel: React.ComponentType = () => {
 	)
 }
 
-// ---------- CH 05 — TUTORIALS / TALKS ----------
-const TalksChannel: React.ComponentType = () => (
+// ---------- CH 05 — COMMUNITY ----------
+const CommunityChannel: React.ComponentType = () => (
 	<div className={styles.content}>
 		<span className={styles.caption}>CH 05 · Public Access</span>
-		<h2 className={styles.h2} style={{ marginTop: 8 }}>Talks &amp; Tutorials</h2>
+		<h2 className={styles.h2} style={{ marginTop: 8 }}>Community</h2>
 		<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, flex: 1 }}>
 			<div style={{ display: 'flex', flexDirection: 'column' }}>
-				<div style={{ aspectRatio: '16 / 9', border: '1px solid rgba(125, 211, 252, 0.3)', borderRadius: 6, overflow: 'hidden' }}>
-					<iframe
-						width='100%'
-						height='100%'
-						src='https://www.youtube.com/embed/Ojtneh8TV1s'
-						title='SoFlo DevCon 2022'
-						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope'
-						style={{ border: 0 }}
+				<div style={{ aspectRatio: '16 / 9', border: '1px solid rgba(125, 211, 252, 0.3)', borderRadius: 6, overflow: 'hidden', background: '#000' }}>
+					<img
+						src='/img/syntax-summit.png'
+						alt='Syntax Summit'
+						style={{ width: '100%', height: '100%', objectFit: 'cover' }}
 					/>
 				</div>
-				<p className={styles.caption} style={{ marginTop: 8 }}>SoFlo DevCon 2022</p>
+				<p className={styles.caption} style={{ marginTop: 8 }}>Syntax Summit · Founder</p>
 			</div>
 			<div style={{ display: 'flex', flexDirection: 'column' }}>
 				<div style={{ aspectRatio: '16 / 9', border: '1px solid rgba(125, 211, 252, 0.3)', borderRadius: 6, overflow: 'hidden' }}>
@@ -351,17 +348,17 @@ const TalksChannel: React.ComponentType = () => (
 						width='100%'
 						height='100%'
 						src='https://www.youtube.com/embed/dpK-SIfkunw'
-						title='Tech Hub Presentation'
+						title='Tech Hub South Florida'
 						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope'
 						style={{ border: 0 }}
 					/>
 				</div>
-				<p className={styles.caption} style={{ marginTop: 8 }}>Tech Hub Presentation</p>
+				<p className={styles.caption} style={{ marginTop: 8 }}>Tech Hub · Speaker</p>
 			</div>
 		</div>
 		<div style={{ display: 'flex', gap: 16, marginTop: 12 }}>
-			<Link href='/talks' style={{ fontFamily: 'Courier New, monospace', fontSize: 11, color: '#7dd3fc', textDecoration: 'underline', letterSpacing: '0.1em' }}>
-				▶ MORE TALKS
+			<Link href='/community' style={{ fontFamily: 'Courier New, monospace', fontSize: 11, color: '#7dd3fc', textDecoration: 'underline', letterSpacing: '0.1em' }}>
+				▶ VIEW COMMUNITY
 			</Link>
 			<Link href='/tutorials' style={{ fontFamily: 'Courier New, monospace', fontSize: 11, color: '#7dd3fc', textDecoration: 'underline', letterSpacing: '0.1em' }}>
 				▶ TUTORIALS
@@ -629,7 +626,7 @@ export const channels: ChannelDef[] = [
 	{ label: 'WORK', Component: WorkChannel },
 	{ label: 'TECH', Component: TechChannel },
 	{ label: 'CONTRIBUTIONS', Component: ContributionsChannel },
-	{ label: 'TALKS', Component: TalksChannel },
+	{ label: 'COMMUNITY', Component: CommunityChannel },
 	{ label: 'BLOG', Component: BlogChannel },
 	{ label: 'CONTACT', Component: ContactChannel },
 	{ label: 'OFF HOURS', Component: HobbiesChannel },

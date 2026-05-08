@@ -8,6 +8,7 @@ import { TypeAnimation } from 'react-type-animation'
 import { WorkItem } from '@/components/WorkItem'
 import { projects } from '@/../data/projects'
 import { contributions } from '@/../data/contributions'
+import { community } from '@/../data/community'
 
 import Skills from '@/components/Skills'
 import ContactForm from '@/components/ContactForm'
@@ -129,6 +130,54 @@ export default function Home() {
 							</span>
 						</button>
 					</Link> */}
+				</div>
+
+				<div className='scroll' id='community' />
+				<div className='py-12'>
+					<div className='flex flex-col justify-center'>
+						<h2 className='text-4xl font-bold inline border-b-4 text-[var(--text-primary)] border-[var(--accent)] w-fit'>
+							Community
+						</h2>
+						<p className='mt-2 text-[var(--text-secondary)]'>
+							building the local dev ecosystem — meetups, workshops & talks
+						</p>
+					</div>
+					<section className='max-w-[1200px] mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8'>
+						{community.map(item => (
+							<div
+								key={item.id}
+								className='border border-[var(--border-color)] bg-[var(--bg-card)] rounded-lg p-6 flex flex-col'>
+								{item.img ? (
+									<img
+										src={item.img}
+										alt={`${item.name} - ${item.role}`}
+										className='w-full h-40 object-cover rounded-md mb-4'
+									/>
+								) : (
+									<div className='w-full h-40 rounded-md mb-4 bg-[var(--bg-card-hover)] flex items-center justify-center'>
+										<span className='text-3xl font-bold text-[var(--accent)] tracking-widest'>
+											{item.name}
+										</span>
+									</div>
+								)}
+								<div className='flex items-center gap-2 flex-wrap mb-2'>
+									<h3 className='text-xl font-bold text-[var(--text-heading)]'>{item.name}</h3>
+									<span className='text-[10px] uppercase tracking-widest px-2 py-0.5 border border-[var(--accent)] text-[var(--accent)] rounded-full'>
+										{item.role}
+									</span>
+								</div>
+								<p className='text-sm text-[var(--text-secondary)] flex-1'>{item.description}</p>
+							</div>
+						))}
+					</section>
+					<Link href='/community'>
+						<button className='primary-accent-bg text-white border-2 px-6 py-3 my-6 flex items-center'>
+							View Community
+							<span className='hover:rotate-90 duration-300'>
+								<HiArrowNarrowRight className='ml-4' />
+							</span>
+						</button>
+					</Link>
 				</div>
 
 				<div id='contact' className='w-full flex justify-center items-center p-4 py-20'>
