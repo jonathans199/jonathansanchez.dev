@@ -24,27 +24,25 @@ export default function Home() {
 			<div className='max-w-[1200px] mx-auto px-4 h-full'>
 				<section className='min-h-screen flex items-center pt-24 pb-12' id='top'>
 					<div className='max-w-[1000px] mx-auto px-8 w-full'>
-						<p className='text-2xl text-[var(--accent)]'>Hi, I'm</p>
+						<p className='text-2xl text-[var(--accent)]'>Hi, I&apos;m</p>
 						<h1 className='text-4xl  sm:text-7xl font-bold text-[var(--text-heading)]'>Jonathan Sanchez</h1>
 
 						<h2 className='text-2xl sm:text-5xl font-bold text-[var(--text-secondary)]'>
 							<TypeAnimation
 								sequence={[
-									'Software Architect 🏯',
+									'I architect systems that scale 🏯',
 									2000,
-									'Hands-on CTO 🚀',
+									'I ship products, not prototypes 🚀',
 									2000,
-									'Full-Stack Engineer 💻',
+									'I turn AI into real products ☁️',
 									2000,
-									'AI & Cloud Builder ☁️',
+									'I lead eng teams that deliver �',
 									2000,
-									'E-commerce & PIM Expert 🛍️',
+									'I build from mobile to cloud 📲',
 									2000,
-									'Mobile Developer 📲',
+									'I spike volleyballs on weekends 🏐',
 									2000,
-									'Volleyball Player 🏐',
-									2000,
-									'Drummer 🥁',
+									'I keep the beat on the drums 🥁',
 									2000,
 								]}
 								wrapper='div'

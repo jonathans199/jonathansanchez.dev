@@ -1,0 +1,684 @@
+/* ============================================================
+   CRT TV — scoped styles for /tv route
+   Visual layers (outside → in):
+     wood bezel → inner metal trim → CRT screen → scanlines →
+     phosphor glow → chromatic aberration → content → vignette
+   ============================================================ */
+
+/* ---------- Stage ---------- */
+.stage {
+	height: 100vh;
+	height: 100dvh;
+	width: 100%;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	padding: 24px;
+	background:
+		radial-gradient(ellipse at center, #1a2332 0%, #0a1020 55%, #050810 100%);
+	position: relative;
+	overflow: hidden;
+}
+
+/* room ambient specks */
+.stage::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-image:
+		radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.06) 0%, transparent 40%),
+		radial-gradient(circle at 80% 70%, rgba(2, 132, 199, 0.05) 0%, transparent 40%);
+	pointer-events: none;
+}
+
+/* ---------- TV cabinet (wood bezel) ---------- */
+.cabinet {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-rows: 1fr;
+	gap: 20px;
+	padding: 28px;
+	border-radius: 32px;
+	background:
+		linear-gradient(145deg, #6b4423 0%, #4a2f17 45%, #3a2410 100%);
+	box-shadow:
+		inset 0 2px 3px rgba(255, 200, 140, 0.25),
+		inset 0 -4px 8px rgba(0, 0, 0, 0.55),
+		0 30px 80px rgba(0, 0, 0, 0.75),
+		0 10px 30px rgba(0, 0, 0, 0.55);
+	width: 100%;
+	height: 100%;
+	min-height: 0;
+}
+
+/* wood grain streaks */
+.cabinet::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: 28px;
+	background-image:
+		repeating-linear-gradient(
+			88deg,
+			rgba(0, 0, 0, 0) 0px,
+			rgba(0, 0, 0, 0) 3px,
+			rgba(0, 0, 0, 0.12) 3px,
+			rgba(0, 0, 0, 0.12) 4px,
+			rgba(0, 0, 0, 0) 4px,
+			rgba(0, 0, 0, 0) 11px
+		);
+	pointer-events: none;
+	mix-blend-mode: overlay;
+	opacity: 0.7;
+}
+
+/* ---------- Screen wrapper (metal trim around CRT) ---------- */
+.screenWrap {
+	position: relative;
+	padding: 18px;
+	border-radius: 22px;
+	background: linear-gradient(160deg, #2a2a2e 0%, #151518 100%);
+	box-shadow:
+		inset 0 2px 2px rgba(255, 255, 255, 0.08),
+		inset 0 -3px 6px rgba(0, 0, 0, 0.8);
+	display: flex;
+	min-width: 0;
+	min-height: 0;
+}
+
+/* ---------- CRT screen ---------- */
+.screen {
+	position: relative;
+	flex: 1;
+	width: 100%;
+	height: 100%;
+	min-width: 0;
+	min-height: 0;
+	border-radius: 44px / 28px;
+	overflow: hidden;
+	background:
+		radial-gradient(ellipse at center, #0b1a2e 0%, #050a16 70%, #02060d 100%);
+	box-shadow:
+		inset 0 0 80px rgba(0, 0, 0, 0.85),
+		inset 0 0 200px rgba(2, 132, 199, 0.08);
+	isolation: isolate;
+}
+
+/* CRT bulge / inner vignette */
+.screen::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(
+		ellipse at center,
+		transparent 55%,
+		rgba(0, 0, 0, 0.4) 90%,
+		rgba(0, 0, 0, 0.75) 100%
+	);
+	pointer-events: none;
+	z-index: 4;
+}
+
+/* glass reflection sheen */
+.screen::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		125deg,
+		rgba(255, 255, 255, 0.04) 0%,
+		rgba(255, 255, 255, 0.08) 15%,
+		transparent 30%,
+		transparent 100%
+	);
+	pointer-events: none;
+	z-index: 5;
+}
+
+/* ---------- Scanlines ---------- */
+.scanlines {
+	position: absolute;
+	inset: 0;
+	background: repeating-linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0) 0px,
+		rgba(0, 0, 0, 0) 2px,
+		rgba(0, 0, 0, 0.22) 3px,
+		rgba(0, 0, 0, 0.22) 3px
+	);
+	pointer-events: none;
+	z-index: 3;
+	animation: scanlineDrift 8s linear infinite;
+	mix-blend-mode: multiply;
+}
+
+@keyframes scanlineDrift {
+	from { background-position: 0 0; }
+	to   { background-position: 0 3px; }
+}
+
+/* ---------- Phosphor flicker ---------- */
+.flicker {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 2;
+	animation: flicker 6s steps(12, end) infinite;
+	background: rgba(56, 189, 248, 0.015);
+}
+
+@keyframes flicker {
+	0%, 100% { opacity: 0.45; }
+	40%      { opacity: 0.6; }
+	50%      { opacity: 0.3; }
+	70%      { opacity: 0.55; }
+}
+
+/* ---------- Content layer ---------- */
+.content {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	padding: clamp(28px, 4vw, 64px) clamp(32px, 5vw, 88px);
+	color: #cde8ff;
+	font-family: var(--font-montserrat), system-ui, sans-serif;
+	text-shadow:
+		0 0 4px rgba(125, 211, 252, 0.35),
+		1px 0 0 rgba(255, 80, 80, 0.22),
+		-1px 0 0 rgba(80, 200, 255, 0.22);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+/* ---------- Static noise overlay (transition) ---------- */
+.noise {
+	position: absolute;
+	inset: 0;
+	z-index: 10;
+	background-color: #1a1a1a;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.7'/></svg>");
+	background-size: 180px 180px;
+	animation: noiseShift 0.08s steps(4, end) infinite;
+	pointer-events: none;
+	mix-blend-mode: screen;
+}
+
+@keyframes noiseShift {
+	0%   { transform: translate(0, 0); }
+	25%  { transform: translate(-10%, 5%); }
+	50%  { transform: translate(8%, -6%); }
+	75%  { transform: translate(-4%, 9%); }
+	100% { transform: translate(6%, -3%); }
+}
+
+/* horizontal tracking roll during transition */
+.roll {
+	position: absolute;
+	inset: 0;
+	z-index: 11;
+	background: linear-gradient(
+		to bottom,
+		transparent 0%,
+		transparent 45%,
+		rgba(255, 255, 255, 0.08) 48%,
+		rgba(255, 255, 255, 0.25) 50%,
+		rgba(255, 255, 255, 0.08) 52%,
+		transparent 55%,
+		transparent 100%
+	);
+	animation: roll 0.6s linear;
+	pointer-events: none;
+}
+
+@keyframes roll {
+	from { transform: translateY(-100%); }
+	to   { transform: translateY(100%); }
+}
+
+/* ---------- Channel HUD (ON AIR readout) ---------- */
+.hud {
+	position: absolute;
+	top: 18px;
+	left: 24px;
+	z-index: 6;
+	font-family: 'Courier New', ui-monospace, monospace;
+	font-size: 12px;
+	letter-spacing: 0.15em;
+	color: #7dd3fc;
+	text-shadow: 0 0 6px rgba(125, 211, 252, 0.7);
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+.hudLive {
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #ef4444;
+	margin-right: 8px;
+	vertical-align: middle;
+	box-shadow: 0 0 8px #ef4444;
+	animation: blink 1.4s ease-in-out infinite;
+}
+
+@keyframes blink {
+	0%, 100% { opacity: 1; }
+	50%      { opacity: 0.3; }
+}
+
+/* ---------- Brand badge on cabinet ---------- */
+.brand {
+	position: absolute;
+	bottom: 14px;
+	left: 32px;
+	z-index: 2;
+	font-family: 'Courier New', ui-monospace, monospace;
+	font-size: 10px;
+	letter-spacing: 0.3em;
+	color: rgba(255, 225, 180, 0.55);
+	text-transform: uppercase;
+}
+
+.powerLed {
+	position: absolute;
+	bottom: 18px;
+	right: 180px;
+	z-index: 2;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: radial-gradient(circle, #22d3ee 0%, #0ea5e9 60%, #0c4a6e 100%);
+	box-shadow: 0 0 10px #22d3ee, inset 0 -1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Control panel (right side) ---------- */
+.controls {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-start;
+	padding: 12px 10px;
+	min-width: 260px;
+	gap: 20px;
+}
+
+/* speaker grille — fabric-inset look, grows to fill remaining column */
+.grille {
+	position: relative;
+	flex: 1;
+	width: 100%;
+	min-height: 180px;
+	padding: 10px;
+	border-radius: 6px;
+	background: linear-gradient(to bottom, #3a2410 0%, #2a1a0d 100%);
+	box-shadow:
+		inset 0 2px 4px rgba(0, 0, 0, 0.6),
+		inset 0 -1px 1px rgba(255, 220, 170, 0.08),
+		0 1px 0 rgba(255, 220, 170, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.65);
+}
+
+/* deep off-state for the CRT screen (when power is off) */
+.screenOff {
+	background: radial-gradient(ellipse at center, #050a14 0%, #02040a 70%, #010204 100%) !important;
+	box-shadow:
+		inset 0 0 80px rgba(0, 0, 0, 0.95),
+		inset 0 0 200px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* ---------- Power button ---------- */
+.powerWrap {
+	padding-top: 10px;
+	border-top: 1px solid rgba(0, 0, 0, 0.5);
+	box-shadow: 0 -1px 0 rgba(255, 220, 170, 0.08);
+}
+
+.powerButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	width: 100%;
+	padding: 12px 14px;
+	border: 1px solid rgba(0, 0, 0, 0.65);
+	border-radius: 4px;
+	background: linear-gradient(to bottom, #2a2a2a 0%, #1a1a1a 45%, #0a0a0a 100%);
+	box-shadow:
+		inset 0 1px 1px rgba(255, 255, 255, 0.18),
+		inset 0 -1px 1px rgba(0, 0, 0, 0.6),
+		0 2px 4px rgba(0, 0, 0, 0.55);
+	color: #e8e8e8;
+	font-family: 'Georgia', 'Times New Roman', serif;
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: 0.28em;
+	cursor: pointer;
+	transition: background 0.1s ease, box-shadow 0.1s ease, transform 0.05s;
+	text-transform: uppercase;
+}
+
+.powerButton:hover {
+	background: linear-gradient(to bottom, #3a3a3a 0%, #222 45%, #111 100%);
+}
+
+.powerButton:active {
+	transform: translateY(1px);
+	box-shadow:
+		inset 0 2px 3px rgba(0, 0, 0, 0.7),
+		inset 0 -1px 1px rgba(255, 255, 255, 0.08);
+}
+
+/* pressed-in latched state when TV is on */
+.powerButtonOn {
+	background: linear-gradient(to bottom, #0f0f0f 0%, #1a1a1a 45%, #252525 100%);
+	box-shadow:
+		inset 0 2px 3px rgba(0, 0, 0, 0.7),
+		inset 0 -1px 1px rgba(255, 255, 255, 0.06),
+		0 0 rgba(0, 0, 0, 0);
+	transform: translateY(1px);
+}
+
+.powerLabel {
+	color: rgba(240, 220, 200, 0.85);
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+.powerGlyph {
+	font-family: inherit;
+	font-size: 15px;
+	color: rgba(200, 180, 160, 0.55);
+}
+
+.powerLedIndicator {
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	background: radial-gradient(circle at 40% 35%, #4a0a0a 0%, #1a0202 70%, #000 100%);
+	box-shadow:
+		inset 0 1px 1px rgba(0, 0, 0, 0.8),
+		inset 0 -1px 1px rgba(80, 20, 20, 0.4);
+	flex-shrink: 0;
+}
+
+.powerLedIndicatorOn {
+	background: radial-gradient(circle at 35% 28%, #ff8080 0%, #ef4444 45%, #7a0a0a 100%);
+	box-shadow:
+		0 0 10px #ef4444,
+		0 0 22px rgba(239, 68, 68, 0.55),
+		inset 0 1px 1px rgba(255, 200, 200, 0.7);
+	animation: ledGlow 2.2s ease-in-out infinite;
+}
+
+/* woven fabric texture inside grille frame */
+.grille::before {
+	content: '';
+	position: absolute;
+	inset: 8px;
+	border-radius: 3px;
+	background-color: #1a0f06;
+	background-image:
+		repeating-linear-gradient(
+			to bottom,
+			rgba(62, 38, 18, 0.9) 0px,
+			rgba(62, 38, 18, 0.9) 1px,
+			rgba(10, 5, 2, 1) 2px,
+			rgba(10, 5, 2, 1) 3px
+		),
+		repeating-linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0) 0px,
+			rgba(0, 0, 0, 0) 2px,
+			rgba(255, 220, 170, 0.04) 2px,
+			rgba(255, 220, 170, 0.04) 3px
+		);
+	box-shadow:
+		inset 0 2px 4px rgba(0, 0, 0, 0.8),
+		inset 0 -1px 1px rgba(255, 220, 170, 0.05);
+}
+
+/* ---------- Channel Button Panel (80s push-button selector) ---------- */
+.buttonPanel {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 10px;
+	width: 100%;
+}
+
+.vhfLabel {
+	font-family: 'Georgia', 'Times New Roman', serif;
+	font-size: 10px;
+	font-weight: 700;
+	color: rgba(255, 235, 200, 0.9);
+	letter-spacing: 0.3em;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* recessed plastic tray holding the buttons */
+.buttonStack {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	padding: 10px 8px;
+	border-radius: 6px;
+	background: linear-gradient(to bottom, #2a1a0d 0%, #1a0f06 100%);
+	box-shadow:
+		inset 0 2px 4px rgba(0, 0, 0, 0.7),
+		inset 0 -1px 1px rgba(255, 200, 140, 0.08),
+		0 1px 0 rgba(255, 220, 170, 0.08);
+	border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+/* chunky chrome push-button */
+.chButton {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 8px 12px;
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.55);
+	border-radius: 3px;
+	background: linear-gradient(to bottom, #ededed 0%, #c8c8c8 45%, #9c9c9c 100%);
+	box-shadow:
+		inset 0 1px 1px rgba(255, 255, 255, 0.85),
+		inset 0 -1px 1px rgba(0, 0, 0, 0.25),
+		0 2px 3px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	transition: box-shadow 0.08s ease, background 0.08s ease, transform 0.05s;
+	font-family: inherit;
+	text-align: left;
+}
+
+.chButton:hover {
+	background: linear-gradient(to bottom, #f8f8f8 0%, #d8d8d8 45%, #acacac 100%);
+}
+
+.chButton:active {
+	transform: translateY(1px);
+	box-shadow:
+		inset 0 2px 3px rgba(0, 0, 0, 0.45),
+		inset 0 -1px 1px rgba(255, 255, 255, 0.3),
+		0 0 0 rgba(0, 0, 0, 0.2);
+}
+
+/* latched/pressed-in state */
+.chButtonActive {
+	background: linear-gradient(to bottom, #7a7a7a 0%, #a8a8a8 45%, #c5c5c5 100%);
+	box-shadow:
+		inset 0 2px 4px rgba(0, 0, 0, 0.55),
+		inset 0 -1px 1px rgba(255, 255, 255, 0.15),
+		0 0 0 rgba(0, 0, 0, 0.2);
+	transform: translateY(1px);
+}
+
+/* big painted channel number */
+.chNumber {
+	font-family: 'Georgia', 'Times New Roman', serif;
+	font-size: 15px;
+	font-weight: 800;
+	color: #1a1a1a;
+	letter-spacing: 0.03em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	line-height: 1;
+	min-width: 22px;
+}
+
+/* channel name label */
+.chLabel {
+	font-family: 'Georgia', 'Times New Roman', serif;
+	font-size: 11px;
+	font-weight: 700;
+	color: #2a2a2a;
+	letter-spacing: 0.08em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	text-transform: uppercase;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	flex: 1;
+}
+
+/* red indicator LED inset into the button */
+.chLed {
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: radial-gradient(circle at 40% 35%, #4a0a0a 0%, #1a0202 70%, #000 100%);
+	box-shadow:
+		inset 0 1px 1px rgba(0, 0, 0, 0.8),
+		inset 0 -1px 1px rgba(80, 20, 20, 0.5);
+	flex-shrink: 0;
+}
+
+.chLedOn {
+	background: radial-gradient(circle at 35% 30%, #ff7070 0%, #ef4444 40%, #991010 100%);
+	box-shadow:
+		0 0 8px #ef4444,
+		0 0 14px rgba(239, 68, 68, 0.5),
+		inset 0 1px 1px rgba(255, 200, 200, 0.6);
+	animation: ledGlow 1.8s ease-in-out infinite;
+}
+
+@keyframes ledGlow {
+	0%, 100% {
+		box-shadow:
+			0 0 8px #ef4444,
+			0 0 14px rgba(239, 68, 68, 0.5),
+			inset 0 1px 1px rgba(255, 200, 200, 0.6);
+	}
+	50% {
+		box-shadow:
+			0 0 12px #ef4444,
+			0 0 22px rgba(239, 68, 68, 0.7),
+			inset 0 1px 1px rgba(255, 220, 220, 0.8);
+	}
+}
+
+/* ---------- Content-specific typography inside screen ---------- */
+.h1 {
+	font-size: clamp(28px, 4.5vw, 56px);
+	font-weight: 800;
+	line-height: 1.05;
+	letter-spacing: -0.02em;
+	color: #e0f2fe;
+	margin-bottom: 12px;
+}
+
+.h2 {
+	font-size: clamp(16px, 2vw, 22px);
+	font-weight: 600;
+	color: #7dd3fc;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.body {
+	font-size: clamp(13px, 1.3vw, 16px);
+	line-height: 1.55;
+	color: #bae6fd;
+	max-width: 62ch;
+}
+
+.caption {
+	font-family: 'Courier New', monospace;
+	font-size: 11px;
+	letter-spacing: 0.2em;
+	color: #38bdf8;
+	text-transform: uppercase;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 820px) {
+	.stage {
+		padding: 12px;
+	}
+
+	.cabinet {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr auto;
+		padding: 16px;
+		gap: 12px;
+		border-radius: 20px;
+	}
+
+	.screenWrap {
+		padding: 10px;
+		border-radius: 14px;
+		min-height: 0;
+	}
+
+	.screen {
+		min-height: 320px;
+		border-radius: 26px / 18px;
+	}
+
+	.controls {
+		flex-direction: column;
+		min-width: auto;
+		width: 100%;
+		gap: 10px;
+		padding: 4px 0 0;
+	}
+
+	.grille {
+		min-height: 56px;
+		max-height: 72px;
+	}
+
+	.buttonStack {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 5px;
+	}
+
+	.chLabel {
+		font-size: 10px;
+	}
+
+	.powerLed {
+		right: 24px;
+		bottom: 22px;
+	}
+
+	.brand {
+		display: none;
+	}
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+	.scanlines,
+	.flicker,
+	.noise,
+	.roll,
+	.hudLive {
+		animation: none;
+	}
+}

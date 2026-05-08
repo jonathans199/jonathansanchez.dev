@@ -1098,6 +1098,15 @@ fraction.js@^4.2.0:
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-4.2.0.tgz"
   integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
 
+framer-motion@^12.38.0:
+  version "12.38.0"
+  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-12.38.0.tgz"
+  integrity sha512-rFYkY/pigbcswl1XQSb7q424kSTQ8q6eAC+YUsSKooHQYuLdzdHjrt6uxUC+PRAO++q5IS7+TamgIw1AphxR+g==
+  dependencies:
+    motion-dom "^12.38.0"
+    motion-utils "^12.36.0"
+    tslib "^2.4.0"
+
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
@@ -1962,6 +1971,18 @@ minimist@^1.2.0, minimist@^1.2.6:
   resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz"
   integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
 
+motion-dom@^12.38.0:
+  version "12.38.0"
+  resolved "https://registry.npmjs.org/motion-dom/-/motion-dom-12.38.0.tgz"
+  integrity sha512-pdkHLD8QYRp8VfiNLb8xIBJis1byQ9gPT3Jnh2jqfFtAsWUA3dEepDlsWe/xMpO8McV+VdpKVcp+E+TGJEtOoA==
+  dependencies:
+    motion-utils "^12.36.0"
+
+motion-utils@^12.36.0:
+  version "12.36.0"
+  resolved "https://registry.npmjs.org/motion-utils/-/motion-utils-12.36.0.tgz"
+  integrity sha512-eHWisygbiwVvf6PZ1vhaHCLamvkSbPIeAYxWUuL3a2PD/TROgE7FvfHWTIH4vMl798QLfMw15nRqIaRDXTlYRg==
+
 mri@^1.1.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/mri/-/mri-1.2.0.tgz"
@@ -2316,7 +2337,7 @@ quick-lru@^5.1.1:
   resolved "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
-react-dom@^18.2.0, "react-dom@>= 15.0.0", react-dom@18.2.0:
+"react-dom@^18.0.0 || ^19.0.0", react-dom@^18.2.0, "react-dom@>= 15.0.0", react-dom@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -2377,7 +2398,7 @@ react-type-animation@^2.1.2:
   resolved "https://registry.npmjs.org/react-type-animation/-/react-type-animation-2.1.2.tgz"
   integrity sha512-6/t4Whl87sLR0c8kzvJngTrCV6OVy3jEeUZoe2svVu9VaYr951VD7OeUie1rIyeD8JfpBIqZGYrPFHZQ04XHrw==
 
-react@*, react@^18.2.0, "react@>= 0.14.0", "react@>= 15.0.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=16, react@18.2.0:
+react@*, "react@^18.0.0 || ^19.0.0", react@^18.2.0, "react@>= 0.14.0", "react@>= 15.0.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=16, react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

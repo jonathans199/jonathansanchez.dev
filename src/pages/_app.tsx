@@ -12,13 +12,19 @@ const montserrat = Montserrat({
 import Layout from '@/layout'
 
 export default function App({ Component, pageProps }: AppProps) {
+  const disableLayout = (Component as any).disableLayout === true
+  const page = <Component {...pageProps} className='max-w-[1200px] mx-auto px-4' />
   return (
     <ThemeProvider>
       <main className={`${montserrat.variable} font-sans`}>
-        <Layout>
-          <div className={styles.center}></div>
-          <Component {...pageProps} className='max-w-[1200px] mx-auto px-4' />
-        </Layout>
+        {disableLayout ? (
+          page
+        ) : (
+          <Layout>
+            <div className={styles.center}></div>
+            {page}
+          </Layout>
+        )}
       </main>
     </ThemeProvider>
   )
